@@ -750,7 +750,7 @@ Escribe el código para conseguir el siguiente resultado:
 
 ## Listas numeradas
 
-\ 
+\
 
 ```{md "code-line-numbers"=FALSE}
 1. Primer item
@@ -764,12 +764,9 @@ Escribe el código para conseguir el siguiente resultado:
 3. Tercer item
 :::
 
-\
-
 . . . 
 
 ```{md "code-line-numbers"=FALSE}
-
 1. Primer item
 1. Segundo item 
 1. Tercer item
@@ -778,7 +775,7 @@ Escribe el código para conseguir el siguiente resultado:
 
 
 ## Listas numeradas
-
+ 
 \ 
 
 ```{md "code-line-numbers"=FALSE}
@@ -792,8 +789,6 @@ a. Primer item
 b. Segundo item 
 c. Tercer item
 :::
-
-\
 
 . . . 
 
@@ -839,7 +834,6 @@ b. Tercer item
 1. Tercer item
 ```
 
-\
 
 
 ::: {.nonincremental}
@@ -878,7 +872,7 @@ Término 2
 ```
 
 
-## {background-color=var(--ex-bg) .center}
+## {background-color=var(--ex-bg) .scrollable}
 
 Escribe el código para conseguir el siguiente resultado:
 
@@ -920,6 +914,8 @@ Encabezado 1 | Encabezado 2
 aaa          | bbb
 ccc          | ddd
 ```
+
+\
 
 Encabezado 1 | Encabezado 2
 ------------ | ------------
