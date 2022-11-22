@@ -1,0 +1,1044 @@
+---
+title: Introducción a Quarto 
+subtitle: Innovación Docente e Iniciación a la Investigación Educativa
+author: Eva María Mazcuñán Navarro
+lang: es
+format: 
+    quarto-presentation-revealjs:
+        title-slide-attributes:
+            data-background-image: "images/quarto-logo.png"
+            data-background-size: "15%"
+            data-background-position: 97% 97%
+        css: "styles/style.css"
+    pdf:
+        keep-tex: true
+        toc: true
+execute: 
+  eval: false
+  echo: true
+engine: knitr  
+editor:
+    render-on-save: true
+---
+
+# ¿Qué es Quarto? {background-color=var(--presentation-heading-color)}
+
+## Quarto 
+
+\ 
+
+![](images/quarto-logo.png){.r-strecht fig-align="center"}
+
+> Quarto is an open-source scientific and technical publishing system built on Pandoc. 
+
+-- <cite>[Quarto](https://quarto.org)</cite>
+
+\
+
+## Pandoc
+
+\
+
+![](images/swiss.jpg){.r-strecht fig-align="center"}
+
+> If you need to convert files from one markup format into another, pandoc is your swiss-army knife.
+
+-- <cite>[Pandoc](https://pandoc.org/)</cite>
+
+\
+
+---
+
+## Flujo Quarto
+
+\
+
+![](images/qmd-how-it-works-simple.png){fig-align="center"}
+
+\
+
+[`qmd` = Quarto Markdown]{style="display:block;text-align:center"}&nbsp;
+
+## Markdown
+
+\
+
+![](images/md.png){.r-strecht fig-align="center"}
+
+\ 
+
+> Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+
+-- <cite>[John Gruber](https://daringfireball.net/projects/markdown/)</cite>
+
+\
+
+
+# Instalación {background-color=var(--presentation-heading-color)}
+
+
+---
+
+\
+
+[**PASO 1**]{style="color:var(--presentation-heading-color);"}
+ 
+
+::: {layout="[40, 60]"}
+
+Instalar ![](images/quarto.png){height="1em" style="vertical-align:top;"}
+
+
+[Página de descargas de Quarto](https://quarto.org/docs/get-started/)
+
+:::
+
+. . . 
+
+\
+
+[**PASO 2**]{style="color:var(--presentation-heading-color);"}
+
+::: {layout="[40, 60]" layout-align="center" } 
+
+Herramienta\
+edición y compilación 
+
+Extensión [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)\
+[para ![](images/vscode-logo.png){height="1em" style="vertical-align:middle"} [VS Code]{style="vertical-align:middle"}]{style="display:block;margin: auto;vertical-align:middle"}
+
+
+:::
+
+# Flujo básico {background-color=var(--presentation-heading-color)}
+
+## Crear documento de Quarto 
+
+\
+
+- Extensión `.qmd` (Quarto Markdown)
+\
+\
+- Estructura
+
+  ::: {style="margin-left:2em;"}
+
+  ```{md "code-line-numbers"=FALSE}
+  ---
+  <Cabecera YAML>
+  ---
+
+  <Contenidos>
+  ```
+  :::
+
+## {background-color=var(--ex-bg)}
+Crea un documento con los siguientes contenidos
+
+\
+
+```{md "code-line-numbers"="|1-4|2|3|6|"}
+---
+title: Introducción a Quarto
+author: Tu nombre aquí
+---
+
+Hola Quarto
+```
+
+\
+
+Guárdalo como `quarto-ejemplo.qmd`
+
+## Compilar: `quarto render` {visibility="hidden"}
+
+\ 
+
+
+``` bash
+quarto render quarto-ejemplo.qmd
+```
+
+
+Compila el documento a todos los formatos especificados\
+ (HTML por defecto)
+
+. . . 
+
+\ 
+
+``` bash
+quarto render quarto-ejemplo.qmd --to pdf
+quarto render quarto-ejemplo.qmd --to html
+```
+
+
+Compila el documento solo al formato especificado con `--to`
+
+## Compilar y previsualizar: `quarto preview` {visibility="hidden"}
+
+\ 
+
+
+``` bash
+quarto preview quarto-ejemplo.qmd
+```
+
+Compila el documento a todos los formatos especificados en el documento (HTML por defecto) y lo previsualiza
+
+
+. . .
+
+\ 
+
+``` bash
+quarto preview quarto-ejemplo.qmd --to pdf
+quarto render quarto-ejemplo.qmd --to html
+```
+
+Compila el documento solo al formato especificado con `--to` y lo previsualiza
+
+
+. . . 
+
+``` bash
+quarto render quarto-ejemplo.qmd --to pdf
+```
+
+Compila el documento al formato especificado
+
+## Compilar [(NO en G2)]{style="color:red"}
+
+\
+
+::: {layout="[-1,2,-1]"}
+
+![](images/render.png){width="100%"}&nbsp;
+
+:::
+
+
+&nbsp;\
+
+
+
+
+## Compilar [en equipos G2]{style="color:red"}   {style="text-align:center" } 
+
+\
+
+Seguir las indicaciones que se darán en clase <br> para conseguir que <br> `Ctrl + S` <br> guarde y compile
+
+\
+
+## {background-color=var(--ex-bg) .center style="text-align:center"}
+
+Haz un mínimo cambio en tu documento 
+<br>
+(ej. `Hola Quarto` $\rightarrow$ `Hola Quarto.` )
+<br>
+compila 
+<br>
+y verifica que los cambios se reflejan en el visor <br> *Quarto Preview*.
+
+
+## Compilar desde IDE {visibility="hidden"}
+
+::: {.r-stack}
+![](images/render.png){height="100%"}&nbsp;
+
+![](images/render2.png){height="100%"}&nbsp;
+:::
+
+::: {.fragment fragment-index=2 .fade-in-then-remove .nonincremental}
+`Render` 
+
+- Guarda
+- Compila al primer formato
+(HTML por defecto)
+- Previsualiza
+:::
+
+::: {.fragment fragment-index=3 .nonincremental}
+`Render DOCX` / `Render HTML` / `Render PDF`
+
+- Guarda
+- Compila al correspondiente formato
+- Previsualiza
+:::
+
+## {background-color=var(--ex-bg) .center visibility="hidden"}
+
+Compila tu documento usando
+
+\ 
+
+1. `Render` 
+1. `Render PDF`
+
+## Autocompilado {visibility="hidden"}
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+editor:
+    render-on-save: true
+```
+
+\
+
+`Render` cada vez que se guarda el documento (`Ctrl + S`)
+
+
+
+# Formatos de salida {background-color=var(--presentation-heading-color)}
+
+## Formatos sin opciones
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+format:
+    html: default
+    pdf: default
+```
+
+
+
+## Formatos con opciones
+
+\
+
+::: {.fragment fragment-index=1 .fade-in-then-remove}
+```{yaml}
+format:
+    html: 
+        theme: slate
+    pdf: 
+        keep-tex: true
+```
+:::
+ 
+
+::: {.fragment fragment-index=2 .fade-in-then-remove}
+```{yaml "code-line-numbers"="3"}
+format:
+    html: 
+        theme: slate
+    pdf: 
+        keep-tex: true
+```
+:::
+
+::: {.fragment fragment-index=3 .fade-in-then-remove}
+```{yaml "code-line-numbers"="5"}
+format:
+    html: 
+        theme: slate
+    pdf: 
+        keep-tex: true
+```
+:::
+
+\
+
+[Cambia el aspecto (tema) del HTML]{.fragment fragment-index=2 .fade-in-then-remove}
+
+[Conserva el archivo `.tex` generado]{.fragment fragment-index=3 .fade-in-then-remove}
+
+
+## {background-color=var(--ex-bg) .center}
+Añade
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+format:
+    html: 
+        theme: slate
+    pdf: 
+        keep-tex: true
+```
+
+\
+
+a la cabecera YAML de tu documento
+
+
+
+## {background-color=var(--ex-bg) .center visibility="hidden"} 
+
+Compila tu documento usando
+
+\ 
+
+1. `Render` 
+1. `Render PDF` 
+    - Verifica que se ha creado `quarto-ejemplo.tex`
+    - Ábrelo
+
+
+##  {background-color=var(--ex-bg) .center}
+
+Cambia las opciones del formato HTML usando
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+format:
+    html: 
+        theme:
+          light: flatly
+          dark: darkly
+```
+
+
+# Secciones {background-color=var(--presentation-heading-color)}
+
+
+
+
+## Crear secciones
+
+\
+
+Sintaxis | Resultado
+--| ------
+`# Título` | Encabezado nivel 1
+`## Título` | Encabezado nivel 2
+`### Título` | Encabezado nivel 3
+... |
+`###### Título` | Encabezado nivel 6
+
+
+## {background-color=var(--ex-bg) .center}
+
+
+Añade dos secciones escribiendo en tu documento:
+
+\
+
+```{md "code-line-numbers"=FALSE}
+# Primera sección
+
+Lorem ipsum
+
+# Segunda sección
+
+Dolor sit amet
+
+```
+
+
+## Secciones numeradas
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+number-sections: true
+```
+
+## Tabla de contenidos
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+toc: true
+```
+
+. . . 
+
+\
+
+Se puede personalizar la posición 
+
+```{yaml "code-line-numbers"=FALSE}
+toc-location: left
+```
+
+
+##  {background-color=var(--ex-bg) .center}
+
+Numera las secciones de tu documento y crea una tabla de contenidos usando
+
+\
+
+```{yaml "code-line-numbers"=FALSE}
+number-sections: true
+toc: true
+```
+
+# Idioma {background-color=var(--presentation-heading-color)}
+
+## Idioma del documento 
+
+\
+
+La opción `lang` permite cambiar el idioma del documento y proporciona traducciones para textos predefinidos como:
+
+::: {.nonincremental}
+- Table of contents
+- Figure
+- ...
+:::
+
+```{yaml "code-line-numbers"=FALSE}
+lang: es
+```
+
+
+## Traducciones alternativas
+
+\
+
+La opción `language` permite personalizar las traducciones automáticas del lenguaje especificado con `lang`.
+
+\ 
+
+```{yaml "code-line-numbers"=FALSE}
+lang: es
+language: 
+    toc-title-document: "Índice" # defecto "Tabla de Contenidos"
+    crossref-fig-title: "Imagen" # defecto "Figura"
+```
+
+::: footer
+Puedes consultar todos los valores personalizables vía la opción `language` [aquí](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml)
+:::
+
+## {background-color=var(--ex-bg) .center}
+
+Establece español como idioma del documento usando
+```{yaml "code-line-numbers"=FALSE}
+lang: es
+```
+y observa que el título para la tabla de contenidos está ahora en español.
+
+. . . 
+
+\
+
+Cambia el título de la tabla de contenidos a "Índice" usando
+```{yaml "code-line-numbers"=FALSE}
+language: 
+    toc-title-document: "Índice"
+```
+
+
+# Espaciado {background-color=var(--presentation-heading-color)}
+
+## Horizontal (entre palabras)
+
+\
+
+```{md "code-line-numbers"=FALSE}
+aaa bbb  ccc    ddd             eee
+```
+
+aaa bbb  ccc    ddd             eee 
+
+. . . 
+
+\
+
+```{md "code-line-numbers"=FALSE}
+aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee
+```
+
+aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee
+
+
+## Vertical: Nueva línea
+
+\
+
+
+```{md "code-line-numbers"=FALSE}
+Lorem ipsum.\
+Dolor sit amet.
+```
+Lorem ipsum.\
+Dolor sit amet.
+
+
+## Vertical: Nuevo párrafo
+
+\
+
+```{md "code-line-numbers"=FALSE}
+Lorem ipsum.
+
+Dolor sit amet.
+```
+Lorem ipsum.
+
+Dolor sit amet.
+
+. . . 
+
+\
+
+```{md "code-line-numbers"=FALSE}
+Lorem ipsum.
+
+
+
+Dolor sit amet.
+```
+
+## Vertical: Líneas en blanco
+
+\ 
+
+
+```{md "code-line-numbers"=FALSE}
+Lorem ipsum.
+
+\
+\
+Dolor sit amet.
+```
+
+
+Lorem ipsum.
+
+\
+\
+Dolor sit amet.
+
+# Ecuaciones {background-color=var(--presentation-heading-color)}
+
+## Ecuaciones: LaTeX
+
+\
+
+Sintaxis | Resultado
+---|------
+`$ ... $` | Modo _inline_
+`$$ ... $$`| Modo _display_ 
+
+::: footer
+Ver [más sobre ecuaciones](https://quarto.org/docs/authoring/markdown-basics.html#equations) en la documentación de Quarto.
+:::
+
+## {background-color=var(--ex-bg) .center}
+
+Añade una sección de título "Ecuaciones" y escribe el código que genere la siguiente salida:
+
+::: {.card}
+Se llega a  $x^2 = 4$, de donde $x=\pm 2$.
+:::
+
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{latex "code-line-numbers"=FALSE}
+Se llega a  $ x^2 = 4 $, de donde $ x = \pm 2 $.
+```
+</details>
+
+## {background-color=var(--ex-bg) .center}
+
+Escribe el código que genere la siguiente salida:
+
+::: {.card}
+La identidad de Euler es:
+$$
+    e^{ i \pi } + 1 = 0
+$$
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{latex "code-line-numbers"=FALSE}
+La identidad de Euler es:
+$$
+    e^{ i \pi } + 1 = 0
+$$
+```
+</details>
+
+# Formato de texto {background-color=var(--presentation-heading-color)}
+
+---
+
+\ 
+
+Sintaxis | Resultado |
+------ | ---- | ----
+` *aaa* ` <br> ` _aaa_ ` | _aaa_ | (itálica)
+[` **aaa** ` <br>  ` __aaa__ ` ]{.fragment fragment-index=2} |  [__aaa__]{.fragment fragment-index=2} | [(negrita)]{.fragment fragment-index=2}
+[`` `aaa` ``]{.fragment fragment-index=3} | [`aaa`]{.fragment fragment-index=3} | [(verbatim)]{.fragment fragment-index=3}
+[` [aaa]{.smallcaps} `]{.fragment fragment-index=4} |   [[aaa]{.smallcaps}]{.fragment fragment-index=4} | [(_small caps_)]{.fragment fragment-index=4}
+||
+
+## {background-color=var(--ex-bg) .center}
+
+Escribe el código para conseguir el siguiente resultado:
+
+::: {.card}
+_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.
+
+_Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir__ y sobre todo __fácil de leer__.
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{md "code-line-numbers"=FALSE}
+_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.
+
+_Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir__ y sobre todo __fácil de leer__.
+```
+</details>
+
+# Listas {background-color=var(--presentation-heading-color)}
+
+## Listas no numeradas
+
+\ 
+
+
+```{md "code-line-numbers"=FALSE}
+- Un item
+- Otro item
+- Otro item más
+```
+
+\
+
+. . . 
+
+También pueden usarse `*` y `+`
+
+\
+
+. . . 
+
+Hay que dejar **líneas en blanco** antes y después de la lista
+
+
+## {background-color=var(--ex-bg) .center}
+
+Escribe el código para conseguir el siguiente resultado:
+
+::: {.card .nonincremental}
+- Quarto
+- Pandoc
+- Markdown
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{md "code-line-numbers"=FALSE}
+- Quarto
+- Pandoc
+- Markdown
+```
+</details>
+
+## Listas numeradas
+
+\ 
+
+```{md "code-line-numbers"=FALSE}
+1. Primer item
+2. Segundo item 
+3. Tercer item
+```
+
+::: {.nonincremental}
+1. Primer item
+2. Segundo item 
+3. Tercer item
+:::
+
+\
+
+. . . 
+
+```{md "code-line-numbers"=FALSE}
+
+1. Primer item
+1. Segundo item 
+1. Tercer item
+
+```
+
+
+## Listas numeradas
+
+\ 
+
+```{md "code-line-numbers"=FALSE}
+a. Primer item
+b. Segundo item 
+c. Tercer item
+```
+
+::: {.nonincremental}
+a. Primer item
+b. Segundo item 
+c. Tercer item
+:::
+
+\
+
+. . . 
+
+```{md "code-line-numbers"=FALSE}
+a. Primer item
+a. Segundo item 
+a. Tercer item
+```
+
+
+
+
+## {background-color=var(--ex-bg) .center}
+
+Comprueba que los siguientes fragmentos de código producen listas convenientemente numeradas:
+
+\
+
+```{md "code-line-numbers"=FALSE}
+1. Primer item
+2. Segundo item 
+2. Tercer item
+```
+
+\ 
+
+```{md "code-line-numbers"=FALSE}
+a. Primer item
+a. Segundo item 
+b. Tercer item
+```
+
+
+## Listas anidadas:
+
+\
+
+```{md "code-line-numbers"=FALSE}
+1. Primer item
+    a. Subitem a
+    a. Suitem b
+1. Segundo item 
+1. Tercer item
+```
+
+\
+
+
+::: {.nonincremental}
+1. Primer item
+    a. Subitem a
+    a. Suitem b
+1. Segundo item 
+1. Tercer item
+:::
+
+
+## Listas descriptivas
+
+\ 
+
+::: {.nonincremental}
+Término 1
+: Descripción del término 1
+
+Término 2
+: Descripción del término 2
+::: 
+
+
+\
+
+. . .
+
+
+```{md "code-line-numbers"=FALSE}
+Término 1
+: Descripción del término 1
+
+Término 2
+: Descripción del término 2
+```
+
+
+## {background-color=var(--ex-bg) .center}
+
+Escribe el código para conseguir el siguiente resultado:
+
+::: {.card .nonincremental}
+Pandoc
+: Conversor de todo a todo.
+
+Markdown
+: Fácil de leer y de escribir.
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{md "code-line-numbers"=FALSE}
+Pandoc
+: Conversor de todo a todo.
+
+Markdown
+: Fácil de leer y de escribir.
+```
+</details>
+
+
+
+<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?75 -->
+
+# Tablas {background-color=var(--presentation-heading-color)}
+
+## Tablas: Sintaxis básica 
+
+\
+
+```{md "code-line-numbers"=FALSE}
+Encabezado 1 | Encabezado 2
+------------ | ------------
+aaa          | bbb
+ccc          | ddd
+```
+
+Encabezado 1 | Encabezado 2
+------------ | ------------
+aaa          | bbb
+ccc          | ddd
+
+
+## Tablas: Sintaxis básica
+
+\
+
+No es preciso que los caractéres `|` estén alineados
+
+\
+
+
+```{md "code-line-numbers"=FALSE}
+Encabezado 1 | Encabezado 2
+--- | ---
+aaa | bbb
+ccc  | ddd
+```
+
+
+## {background-color=var(--ex-bg)  .scrollable}
+
+Escribe el código para conseguir el siguiente resultado:
+
+::: {.card .nonincremental}
+Nombre | Apellidos
+--- | ---
+Antonio | Pérez González
+Bernardo | García Pérez
+César | González García
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{md "code-line-numbers"=FALSE}
+Nombre | Apellidos
+--- | ---
+Antonio | Pérez González
+Bernardo | García Pérez
+César | González García
+```
+</details>
+
+
+## {background-color=var(--ex-bg)  .scrollable}
+
+Duplica la tabla anterior y modifica los delimitadores del encabezado así:
+
+```{md "code-line-numbers"=FALSE}
+Nombre | Apellidos
+---: | :---:
+Ana | Pérez González
+Bernardo | García Pérez
+Carlos | González García
+```
+
+¿Qué resultado aprecias?
+
+\
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+El resultado es
+
+Nombre | Apellidos
+---: | :---:
+Ana | Pérez González
+Bernardo | García Pérez
+Carlos | González García
+
+La primera columna queda alineada a la derecha (por `---:`).
+
+Y la segunda columna queda centrada (por `:---:`).
+</details>
+
+## {background-color=var(--ex-bg)  .scrollable}
+Crea una tabla en la que el contenido de las celdas de la segunda columna, supere la anchura de una línea.
+
+Por ejemplo:
+
+Herramienta | Descripción
+--- | ---
+LaTeX | Sistema tipográfico de alta calidad   para la producción de documentos técnicos y científicos.
+Quarto | Sistema para la producción  de documentos técnicos y científicos basado en Pandoc.
+
+## {background-color=var(--ex-bg)  .scrollable}
+
+Deja una línea en blanco después de la tabla creada y, en la siguiente línea, escribe 
+
+```{md "code-line-numbers"=FALSE}
+: {tbl-colwidths="[20,80]"}
+```
+
+¿Qué consigues?
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+El resultado es
+
+Herramienta | Descripción
+--- | ---
+LaTeX | Sistema tipográfico de alta calidad   para la producción de documentos técnicos y científicos.
+Quarto | Sistema para la producción  de documentos técnicos y científicos basado en Pandoc.
+
+: {tbl-colwidths="[20,80]"}
+
+Se trata de la misma tabla con columnas de anchura $20\%$ y $80\%$ (por `tbl-colwidths="[20,80]"`).  
+</details>
+
+
+<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?89 -->
