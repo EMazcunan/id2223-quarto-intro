@@ -207,7 +207,7 @@ quarto render quarto-ejemplo.qmd --to pdf
 
 Compila el documento al formato especificado
 
-## Compilar [(NO en G2)]{style="color:red"}
+## Compilar
 
 \
 
@@ -222,22 +222,19 @@ Compila el documento al formato especificado
 
 
 
-
-## Compilar [en equipos G2]{style="color:red"}   {style="text-align:center" } 
-
-\
-
-Seguir las indicaciones que se darán en clase <br> para conseguir que <br> `Ctrl + S` <br> guarde y compile
-
-\
-
 ## {background-color=var(--ex-bg) .center style="text-align:center"}
 
-Haz un mínimo cambio en tu documento 
+Compila tu documento.
+
+\
+
+. . . 
+
+Haz un mínimo cambio 
 <br>
 (ej. `Hola Quarto` $\rightarrow$ `Hola Quarto.` )
 <br>
-compila 
+compila de nuevo
 <br>
 y verifica que los cambios se reflejan en el visor <br> *Quarto Preview*.
 
