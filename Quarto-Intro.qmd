@@ -633,7 +633,7 @@ Se llega a  $x^2 = 4$, de donde $x=\pm 2$.
     </summary>
 
 ```{latex "code-line-numbers"=FALSE}
-Se llega a  $ x^2 = 4 $, de donde $ x = \pm 2 $.
+Se llega a  $x^2 = 4$, de donde $x = \pm 2$.
 ```
 </details>
 
@@ -720,7 +720,13 @@ También pueden usarse `*` y `+`
 
 . . . 
 
-Hay que dejar **líneas en blanco** antes y después de la lista
+Hay que dejar **líneas en blanco** antes y después de la lista.
+
+\
+
+. . . 
+
+Opcionalmente línea en blanco entre items (afecta al espaciado).
 
 
 ## {background-color=var(--ex-bg) .center}
@@ -897,7 +903,6 @@ Markdown
 
 
 
-<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?75 -->
 
 # Tablas {background-color=var(--presentation-heading-color)}
 
@@ -907,7 +912,7 @@ Markdown
 
 ```{md "code-line-numbers"=FALSE}
 Encabezado 1 | Encabezado 2
------------- | ------------
+-------------|-------------
 aaa          | bbb
 ccc          | ddd
 ```
@@ -915,7 +920,7 @@ ccc          | ddd
 \
 
 Encabezado 1 | Encabezado 2
------------- | ------------
+-------------|-------------
 aaa          | bbb
 ccc          | ddd
 
@@ -933,8 +938,9 @@ No es preciso que los caractéres `|` estén alineados
 Encabezado 1 | Encabezado 2
 --- | ---
 aaa | bbb
-ccc  | ddd
+ccc| ddd
 ```
+
 
 
 ## {background-color=var(--ex-bg)  .scrollable}
@@ -975,10 +981,8 @@ Ana | Pérez González
 Bernardo | García Pérez
 Carlos | González García
 ```
-
+ 
 ¿Qué resultado aprecias?
-
-\
 
 <details>
     <summary>
@@ -1034,4 +1038,548 @@ Se trata de la misma tabla con columnas de anchura $20\%$ y $80\%$ (por `tbl-col
 </details>
 
 
-<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?89 -->
+# Links e Imágenes {background-color=var(--presentation-heading-color)}
+
+## Links
+
+\ 
+
+Sintaxis | Resultado 
+---|--- 
+[`<https://quarto.org> `]{style="font-size:0.85em"} | <https://quarto.org> 
+[`[Quarto](https://quarto.org)`]{.fragment fragment-index=2 style="font-size:0.85em"} |  [[Quarto](https://quarto.org/)]{.fragment fragment-index=2} 
+[`[Quarto](https://quarto.org/ "Web de Quarto")`]{.fragment fragment-index=3 style="font-size:0.85em"} |  [[Quarto](https://quarto.org/ "Web de Quarto")]{.fragment fragment-index=3} 
+
+: {tbl-colwidths="[60,40]"}
+
+
+## {background-color=var(--ex-bg) .center}
+
+Escribe el código necesario para crear el siguiente resultado, donde el link abre `https://quarto.org`
+
+::: {.card}
+Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
+:::
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+```{md "code-line-numbers"=FALSE}
+Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
+```
+</details>
+
+
+
+## Imágenes: Sintaxis básica
+
+\
+
+`![](<ruta del archivo>)`
+
+\ 
+
+. . . 
+
+__Ejemplo__
+
+```{md "code-line-numbers"=FALSE}
+![](images/quarto-logo.png)
+```
+
+![](images/quarto-logo.png)
+
+
+
+## {background-color=var(--ex-bg) .scrollable}
+
+Descarga el logo de Quarto de\ 
+<https://quarto.org/quarto.png>\
+y guárdalo en la ubicación oportuna para que funcione el código siguiente:
+
+
+``` {md "code-line-numbers"=FALSE}
+El logo de Quarto es ![](images/quarto.png)
+```
+
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+La imagen debe llamarse `quarto.png` y estar ubicada en una carpeta de nombre `images` dentro del directorio del documento `quarto-ejemplo.qmd`.
+
+</details>
+
+## Imágenes: Sintaxis general
+
+\
+
+`![<Texto>](<ruta del archivo>){<opciones>}`
+
+\ 
+
+. . . 
+
+__Ejemplo__
+
+```{md "code-line-numbers"=FALSE}
+![Logo de Quarto](images/quarto-logo.png){
+    fig-align=center
+    width="5%"
+}
+```
+
+![Logo de Quarto](images/quarto-logo.png){
+    fig-align=center
+    width="5%"
+}
+
+
+
+
+
+:::{.notes}
+El texto solo aparece como _caption_ si la imagen ocupa su propio párrafo (entre dos líneas vacías). En otro caso sólo se utiliza en HTML, como texto alternativo a mostrar cuando no se encuentra la imagen.
+:::
+
+
+
+## {background-color=var(--ex-bg) .scrollable}
+
+Duplica el código anterior para incluir el logo de Quarto y modifícalo así:
+
+
+``` {md "code-line-numbers"=FALSE}
+El logo de Quarto es
+
+![](images/quarto.png){
+    fig-align="center"
+    width="20%"
+}
+```
+
+¿Qué cambios aprecias?
+
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+La imagen queda centrada (por `fig-align="center"`) y ocupa el `20%` de la anchura de la página (por `width="20%"`).
+
+</details>
+
+# Vídeos {background-color=var(--presentation-heading-color)}
+
+## Vídeos: Sintaxis básica
+
+\
+
+``` {shortcodes=false}
+{{< video <ruta> >}}
+```
+
+\
+
+. . . 
+
+__Ejemplos__
+
+``` {md "code-line-numbers"=FALSE}
+{{< video https://youtu.be/gsw-de5xcCU >}}
+```
+
+. . . 
+
+
+``` {md "code-line-numbers"=FALSE}
+{{< video videos/video.mp4 >}}
+```
+
+
+## {background-color=var(--ex-bg) .center .scrollable style="text-align:center;"}
+
+Busca cualquier vídeo en YouTube,<br> obtén su URL con el botón **Compartir**, <br> e inclúyelo en tu documento con la sintaxis
+
+:::{style="width:100%; text-align:center"} 
+```{shortcodes=false style="background-color:var(--ex-bg)!important; display:inline-block;width:fit-content;"} 
+{{< video ... >}}
+```
+:::
+
+
+
+
+# Callouts {background-color=var(--presentation-heading-color)}
+
+
+---
+
+\ 
+
+::: {.callout-note}
+Los _callouts_ son una forma de destacar contenidos.  
+:::
+
+\ 
+
+. . . 
+
+``` {md "code-line-numbers"=FALSE}
+::: {.callout-note}
+Los _callouts_ son una forma de destacar contenido.  
+:::
+```
+
+## Callouts: Tipos
+
+:::: {layout="[[-25,50,-25],[50, 50], [50,50]]"}
+
+::: {.callout-note}
+`.callout-note`
+:::
+
+::: {.callout-warning}
+`.callout-warning`
+:::
+
+::: {.callout-important}
+`.callout-important`
+:::
+
+::: {.callout-tip}
+`.callout-tip`
+:::
+
+::: {.callout-caution}
+`.callout-tip`
+:::
+
+::::
+
+## {background-color=var(--ex-bg) .center .scrollable}
+
+Crea el siguiente _callout_ (`.callout-important`)
+
+:::: {.card}
+::: {.callout-important}
+Esto es importante.
+:::
+::::
+
+
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+``` {md "code-line-numbers"=FALSE}
+::: {.callout-important}
+Esto es importante.
+:::
+```
+
+</details>
+
+
+
+## Callouts: Título personalizado
+
+\
+
+::: {.callout-note}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+:::
+
+\
+
+. . . 
+
+
+``` {md "code-line-numbers"=FALSE}
+::: {.callout-note}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+:::
+```
+
+## Callouts: Colapsar
+<!-- 
+\
+
+::: {.callout-note collapse="true"}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+::: -->
+
+\
+
+. . . 
+
+
+``` {md "code-line-numbers"=FALSE}
+::: {.callout-note collapse="true"}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+:::
+```
+
+## {background-color=var(--ex-bg) .center .scrollable }
+
+
+Duplica el _callout_ anterior y añade el código necesario para conseguir:
+
+::: {.nonincremental}
+- Título "Muy importante"
+- Colapsable (`collapse="true"`)
+:::
+
+
+<details>
+    <summary>
+**Solución**
+    </summary>
+
+``` {md "code-line-numbers"=FALSE}
+::: {.callout-important collapse="true"}
+## Muy importante
+Esto es importante.
+:::
+```
+
+</details>
+
+# Código {background-color=var(--presentation-heading-color)}
+
+
+## Código (`verbatim`)
+
+\
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Sintaxis**
+
+\
+
+````
+```
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+````
+:::
+
+::: {.column width="50%"}
+**Resultado**
+
+\
+
+
+```
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+:::
+::::
+
+
+
+## Código: Resaltado sintaxis
+
+\ 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Sintaxis**
+
+\
+
+````
+```python
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+````
+
+:::
+
+::: {.column width="50%"}
+**Resultado**
+
+\
+
+
+```python
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+
+:::
+
+::::
+
+## Código: Ejecución
+
+
+\
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+**Sintaxis**
+
+\
+
+
+````
+```{{python}}
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+````
+
+
+::::
+
+:::: {.column width="50%"}
+**Resultado**
+
+\
+
+
+```{python}
+#| eval: true
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```
+::::
+
+:::::
+
+
+
+# Más información {background-color=var(--presentation-heading-color)}
+
+---
+
+## Ecuaciones
+
+\
+
+Más información sobre ecuaciones
+
+::: {.nonincremental}
+- En la [documentación de Quarto](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+- En el [manual de Pandoc](https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?121)
+:::
+
+## Listas
+
+\
+
+Más información sobre listas
+
+::: {.nonincremental}
+- En la [documentación de Quarto](https://quarto.org/docs/authoring/markdown-basics.html#lists)
+- En el [manual de Pandoc](https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?75)
+:::
+
+## Tablas
+
+\
+
+Más información sobre tablas
+
+::: {.nonincremental}
+- En la [documentación de Quarto](https://quarto.org/docs/authoring/tables.html)
+- En el [manual de Pandoc](https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?89)
+:::
+
+## Links e imágenes
+
+\
+
+Más información sobre links e imágenes
+
+::: {.nonincremental}
+- En la [documentación de Quarto](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+- En el manual de Pandoc: [links](https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?123), [imágenes](https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?129)
+:::
+
+## Vídeos
+
+\
+
+Más información sobre vídeos en la [documentación de Quarto](https://quarto.org/docs/authoring/videos.html)
+
+## Callouts
+
+\
+
+Más información en la documentación de Quarto sobre
+
+::: {.nonincremental}
+- Callouts [aquí](https://quarto.org/docs/authoring/callouts.html) y [aquí](https://quarto.org/docs/output-formats/html-themes.html#callouts)
+- [Otros tipos de bloques](https://quarto.org/docs/authoring/markdown-basics.html#other-blocks) 
+:::
+
+
+## Código 
+
+\
+
+Más información sobre ejecución de código en el capítulo *Computations* de la [guía de Quarto](https://quarto.org/docs/guide/). Algunas secciones:
+
+::: {.nonincremental}
+- [Usar Python](https://quarto.org/docs/computations/python.html)
+- [Usar R](https://quarto.org/docs/computations/r.html)
+- [Opciones de ejecución](https://quarto.org/docs/computations/execution-options.html)
+:::
+

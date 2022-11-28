@@ -902,7 +902,7 @@ Dolor sit amet.</p>
 <strong>Solución</strong>
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="false"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Se llega a  <span class="ss">$ x^2 = 4 $</span>, de donde <span class="ss">$ x = </span><span class="sc">\pm</span><span class="ss"> 2 $</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="false"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Se llega a  <span class="ss">$x^2 = 4$</span>, de donde <span class="ss">$x = </span><span class="sc">\pm</span><span class="ss"> 2$</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </details>
 </section>
@@ -1015,7 +1015,12 @@ Dolor sit amet.</p>
 </p>
 </div>
 <div class="fragment">
-<p>Hay que dejar <strong>líneas en blanco</strong> antes y después de la lista</p>
+<p>Hay que dejar <strong>líneas en blanco</strong> antes y después de la lista.</p>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<p>Opcionalmente línea en blanco entre items (afecta al espaciado).</p>
 </div>
 </section>
 <section id="section-12" class="slide level2 center" data-background-color="var(--ex-bg)">
@@ -1180,7 +1185,6 @@ Fácil de leer y de escribir.
 <span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>: Fácil de leer y de escribir.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </details>
-<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?75 -->
 </section></section>
 <section>
 <section id="tablas" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
@@ -1193,7 +1197,7 @@ Fácil de leer y de escribir.
 </p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>------------ | ------------</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>-------------|-------------</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>aaa          | bbb</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>ccc          | ddd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1229,7 +1233,7 @@ Fácil de leer y de escribir.
 <div class="sourceCode cell-code" id="cb45" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>--- | ---</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>aaa | bbb</span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>ccc  | ddd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>ccc| ddd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-15" class="slide level2 scrollable" data-background-color="var(--ex-bg)">
@@ -1283,8 +1287,6 @@ Fácil de leer y de escribir.
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>Carlos | González García</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>¿Qué resultado aprecias?</p>
-<p><br>
-</p>
 <details>
 <summary>
 <strong>Solución</strong>
@@ -1379,7 +1381,574 @@ Y la segunda columna queda centrada (por <code>:---:</code>).
 </table>
 Se trata de la misma tabla con columnas de anchura <span class="math inline">\(20\%\)</span> y <span class="math inline">\(80\%\)</span> (por <code>tbl-colwidths="[20,80]"</code>).
 </details>
-<!-- https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?89 -->
+</section></section>
+<section>
+<section id="links-e-imágenes" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Links e Imágenes</h1>
+
+</section>
+<section id="links" class="slide level2">
+<h2>Links</h2>
+<p>&nbsp;</p>
+<table>
+<colgroup>
+<col style="width: 60%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sintaxis</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="font-size:0.85em"><code>&lt;https://quarto.org&gt;</code></span></td>
+<td><a href="https://quarto.org" class="uri">https://quarto.org</a></td>
+</tr>
+<tr class="even">
+<td><span class="fragment" data-fragment-index="2" style="font-size:0.85em"><code>[Quarto](https://quarto.org)</code></span></td>
+<td><span class="fragment" data-fragment-index="2"><a href="https://quarto.org/">Quarto</a></span></td>
+</tr>
+<tr class="odd">
+<td><span class="fragment" data-fragment-index="3" style="font-size:0.85em"><code>[Quarto](https://quarto.org/ "Web de Quarto")</code></span></td>
+<td><span class="fragment" data-fragment-index="3"><a href="https://quarto.org/" title="Web de Quarto">Quarto</a></span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="section-19" class="slide level2 center" data-background-color="var(--ex-bg)">
+<h2></h2>
+<p>Escribe el código necesario para crear el siguiente resultado, donde el link abre <code>https://quarto.org</code></p>
+<div class="card">
+<p>Puedes consultar la documentación de Quarto <a href="https://quarto.org">aquí</a>.</p>
+</div>
+<details>
+<summary>
+<strong>Solución</strong>
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>Puedes consultar la documentación de Quarto <span class="co">[</span><span class="ot">aquí</span><span class="co">](https://quarto.org)</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="imágenes-sintaxis-básica" class="slide level2">
+<h2>Imágenes: Sintaxis básica</h2>
+<p><br>
+</p>
+<p><code>![](&lt;ruta del archivo&gt;)</code></p>
+<p>&nbsp;</p>
+<div class="fragment">
+<p><strong>Ejemplo</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/quarto-logo.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img data-src="images/quarto-logo.png"></p>
+</div>
+</section>
+<section id="section-20" class="slide level2 scrollable" data-background-color="var(--ex-bg)">
+<h2></h2>
+<p>Descarga el logo de Quarto de&nbsp; <a href="https://quarto.org/quarto.png" class="uri">https://quarto.org/quarto.png</a><br>
+y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es <span class="al">![](images/quarto.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<details>
+<summary>
+<strong>Solución</strong>
+</summary>
+<p>La imagen debe llamarse <code>quarto.png</code> y estar ubicada en una carpeta de nombre <code>images</code> dentro del directorio del documento <code>quarto-ejemplo.qmd</code>.</p>
+</details>
+</section>
+<section id="imágenes-sintaxis-general" class="slide level2">
+<h2>Imágenes: Sintaxis general</h2>
+<p><br>
+</p>
+<p><code>![&lt;Texto&gt;](&lt;ruta del archivo&gt;){&lt;opciones&gt;}</code></p>
+<p>&nbsp;</p>
+<div class="fragment">
+<p><strong>Ejemplo</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Logo de Quarto](images/quarto-logo.png)</span>{</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    fig-align=center</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>    width="5%"</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/quarto-logo.png" style="width:5.0%"></p>
+<p></p><figcaption>Logo de Quarto</figcaption><p></p>
+</figure>
+</div>
+<aside class="notes">
+<p>El texto solo aparece como <em>caption</em> si la imagen ocupa su propio párrafo (entre dos líneas vacías). En otro caso sólo se utiliza en HTML, como texto alternativo a mostrar cuando no se encuentra la imagen.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="section-21" class="slide level2 scrollable" data-background-color="var(--ex-bg)">
+<h2></h2>
+<p>Duplica el código anterior para incluir el logo de Quarto y modifícalo así:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/quarto.png)</span>{</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>    fig-align="center"</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>    width="20%"</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¿Qué cambios aprecias?</p>
+<details>
+<summary>
+<strong>Solución</strong>
+</summary>
+<p>La imagen queda centrada (por <code>fig-align="center"</code>) y ocupa el <code>20%</code> de la anchura de la página (por <code>width="20%"</code>).</p>
+</details>
+</section></section>
+<section>
+<section id="vídeos" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Vídeos</h1>
+
+</section>
+<section id="vídeos-sintaxis-básica" class="slide level2">
+<h2>Vídeos: Sintaxis básica</h2>
+<p><br>
+</p>
+<pre data-shortcodes="false"><code>{{&lt; video &lt;ruta&gt; &gt;}}</code></pre>
+<p><br>
+</p>
+<div class="fragment">
+<p><strong>Ejemplos</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/gsw-de5xcCU &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video videos/video.mp4 &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-22" class="slide level2 center scrollable" data-background-color="var(--ex-bg)" style="text-align:center;">
+<h2></h2>
+<p>Busca cualquier vídeo en YouTube,<br> obtén su URL con el botón <strong>Compartir</strong>, <br> e inclúyelo en tu documento con la sintaxis</p>
+<div style="width:100%; text-align:center">
+<pre data-shortcodes="false" style="background-color:var(--ex-bg)!important; display:inline-block;width:fit-content;"><code>{{&lt; video ... &gt;}}</code></pre>
+</div>
+</section></section>
+<section>
+<section id="callouts" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Callouts</h1>
+
+</section>
+<section class="slide level2">
+
+<p>&nbsp;</p>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Los <em>callouts</em> son una forma de destacar contenidos.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>Los _callouts_ son una forma de destacar contenido.  </span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="callouts-tipos" class="slide level2">
+<h2>Callouts: Tipos</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="callout callout-note callout-captioned callout-style-default quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><code>.callout-note</code></p>
+</div>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="callout callout-warning callout-captioned callout-style-default quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p><code>.callout-warning</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-captioned callout-style-default quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><code>.callout-important</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="callout callout-tip callout-captioned callout-style-default quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><code>.callout-tip</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-caution callout-captioned callout-style-default quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Precaución</strong></p>
+</div>
+<div class="callout-content">
+<p><code>.callout-tip</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-23" class="slide level2 center scrollable" data-background-color="var(--ex-bg)">
+<h2></h2>
+<p>Crea el siguiente <em>callout</em> (<code>.callout-important</code>)</p>
+<div class="card">
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Esto es importante.</p>
+</div>
+</div>
+</div>
+</div>
+<details>
+<summary>
+<strong>Solución</strong>
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="callouts-título-personalizado" class="slide level2">
+<h2>Callouts: Título personalizado</h2>
+<p><br>
+</p>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Utilidad de los <em>callouts</em></strong></p>
+</div>
+<div class="callout-content">
+<p>Son una forma de destacar contenidos</p>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="callouts-colapsar" class="slide level2">
+<h2>Callouts: Colapsar</h2>
+<!-- 
+\
+
+::: {.callout-note collapse="true"}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+::: -->
+<p><br>
+</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-24" class="slide level2 center scrollable" data-background-color="var(--ex-bg)">
+<h2></h2>
+<p>Duplica el <em>callout</em> anterior y añade el código necesario para conseguir:</p>
+<div>
+<ul>
+<li>Título “Muy importante”</li>
+<li>Colapsable (<code>collapse="true"</code>)</li>
+</ul>
+</div>
+<details>
+<summary>
+<strong>Solución</strong>
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important collapse="true"}</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Muy importante</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section></section>
+<section>
+<section id="código" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Código</h1>
+
+</section>
+<section id="código-verbatim" class="slide level2">
+<h2>Código (<code>verbatim</code>)</h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sintaxis</strong></p>
+<p><br>
+</p>
+<pre><code>```
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```</code></pre>
+</div><div class="column" style="width:50%;">
+<p><strong>Resultado</strong></p>
+<p><br>
+</p>
+<pre><code>x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)</code></pre>
+</div>
+</div>
+</section>
+<section id="código-resaltado-sintaxis" class="slide level2">
+<h2>Código: Resaltado sintaxis</h2>
+<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sintaxis</strong></p>
+<p><br>
+</p>
+<pre><code>```python
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
+```</code></pre>
+</div><div class="column" style="width:50%;">
+<p><strong>Resultado</strong></p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb66-2"><a href="#cb66-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb66-3"><a href="#cb66-3"></a></span>
+<span id="cb66-4"><a href="#cb66-4"></a><span class="co"># Sumar</span></span>
+<span id="cb66-5"><a href="#cb66-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb66-6"><a href="#cb66-6"></a></span>
+<span id="cb66-7"><a href="#cb66-7"></a><span class="co"># Imprimir</span></span>
+<span id="cb66-8"><a href="#cb66-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="código-ejecución" class="slide level2">
+<h2>Código: Ejecución</h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sintaxis</strong></p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sumar</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimir</span></span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Resultado</strong></p>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb68-3"><a href="#cb68-3"></a></span>
+<span id="cb68-4"><a href="#cb68-4"></a><span class="co"># Sumar</span></span>
+<span id="cb68-5"><a href="#cb68-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb68-6"><a href="#cb68-6"></a></span>
+<span id="cb68-7"><a href="#cb68-7"></a><span class="co"># Imprimir</span></span>
+<span id="cb68-8"><a href="#cb68-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="más-información" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Más información</h1>
+
+</section>
+<section id="ecuaciones-1" class="slide level2">
+<h2>Ecuaciones</h2>
+<p><br>
+</p>
+<p>Más información sobre ecuaciones</p>
+<div>
+<ul>
+<li>En la <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">documentación de Quarto</a></li>
+<li>En el <a href="https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?121">manual de Pandoc</a></li>
+</ul>
+</div>
+</section>
+<section id="listas-1" class="slide level2">
+<h2>Listas</h2>
+<p><br>
+</p>
+<p>Más información sobre listas</p>
+<div>
+<ul>
+<li>En la <a href="https://quarto.org/docs/authoring/markdown-basics.html#lists">documentación de Quarto</a></li>
+<li>En el <a href="https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?75">manual de Pandoc</a></li>
+</ul>
+</div>
+</section>
+<section id="tablas-1" class="slide level2">
+<h2>Tablas</h2>
+<p><br>
+</p>
+<p>Más información sobre tablas</p>
+<div>
+<ul>
+<li>En la <a href="https://quarto.org/docs/authoring/tables.html">documentación de Quarto</a></li>
+<li>En el <a href="https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?89">manual de Pandoc</a></li>
+</ul>
+</div>
+</section>
+<section id="links-e-imágenes-1" class="slide level2">
+<h2>Links e imágenes</h2>
+<p><br>
+</p>
+<p>Más información sobre links e imágenes</p>
+<div>
+<ul>
+<li>En la <a href="https://quarto.org/docs/authoring/markdown-basics.html#links-images">documentación de Quarto</a></li>
+<li>En el manual de Pandoc: <a href="https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?123">links</a>, <a href="https://www.uv.es/wikibase/doc/cas/pandoc_manual_2.7.3.wiki?129">imágenes</a></li>
+</ul>
+</div>
+</section>
+<section id="vídeos-1" class="slide level2">
+<h2>Vídeos</h2>
+<p><br>
+</p>
+<p>Más información sobre vídeos en la <a href="https://quarto.org/docs/authoring/videos.html">documentación de Quarto</a></p>
+</section>
+<section id="callouts-1" class="slide level2">
+<h2>Callouts</h2>
+<p><br>
+</p>
+<p>Más información en la documentación de Quarto sobre</p>
+<div>
+<ul>
+<li>Callouts <a href="https://quarto.org/docs/authoring/callouts.html">aquí</a> y <a href="https://quarto.org/docs/output-formats/html-themes.html#callouts">aquí</a></li>
+<li><a href="https://quarto.org/docs/authoring/markdown-basics.html#other-blocks">Otros tipos de bloques</a></li>
+</ul>
+</div>
+</section>
+<section id="código-1" class="slide level2">
+<h2>Código</h2>
+<p><br>
+</p>
+<p>Más información sobre ejecución de código en el capítulo <em>Computations</em> de la <a href="https://quarto.org/docs/guide/">guía de Quarto</a>. Algunas secciones:</p>
+<div>
+<ul>
+<li><a href="https://quarto.org/docs/computations/python.html">Usar Python</a></li>
+<li><a href="https://quarto.org/docs/computations/r.html">Usar R</a></li>
+<li><a href="https://quarto.org/docs/computations/execution-options.html">Opciones de ejecución</a></li>
+</ul>
+</div>
 <div class="footer footer-default">
 
 </div>
