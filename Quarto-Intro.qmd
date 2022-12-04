@@ -1257,7 +1257,7 @@ Los _callouts_ son una forma de destacar contenido.
 :::
 
 ::: {.callout-caution}
-`.callout-tip`
+`.callout-caution`
 :::
 
 ::::
