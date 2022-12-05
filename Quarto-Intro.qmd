@@ -1503,6 +1503,123 @@ print(x+y)
 
 :::::
 
+# Referencias cruzadas {background-color=var(--presentation-heading-color)}
+
+## Referencias cruzadas: Ejemplo
+
+\ 
+
+
+
+![Logo de Quarto](images/quarto-logo.png){#fig-quarto height="5%"}
+
+\
+
+::: {layout="[[-48,2,-48]]"}
+...
+:::
+
+\
+
+La @fig-quarto muestra el logo de Quarto.
+
+
+## Referencias cruzadas: Sintaxis
+
+\
+
+__Crear__
+
+`#<tipo>-<identificador>`
+
+\
+
+. . . 
+
+__Citar__
+
+`@<tipo>-<identificador>`
+
+
+## Referencias cruzadas: Algunos tipos
+
+\
+
+
+Elemento | `<tipo>`
+---------|---------
+Figuras | `fig`
+Tablas  | `tbl`
+Ecuaciones | `eq`
+Secciones | `sec`
+
+
+
+
+# Teoremas {background-color=var(--presentation-heading-color)}
+
+
+## Teoremas: Ejemplo
+
+\
+
+::: {#thm-ptg}
+## Teorema de Pitágoras
+En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que
+$$
+h^2 = c_1^2 + c_2^2
+$$
+:::
+
+El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.
+
+
+## Teoremas: Ejemplo
+
+\
+
+
+```{md, "code-line-numbers"=FALSE}
+::: {#thm-ptg}
+## Teorema de Pitágoras
+En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que
+$$
+h^2 = c_1^2 + c_2^2
+$$
+:::
+
+El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.
+```
+
+## Teoremas: Algunos tipos
+
+\
+
+Nombre | `<tipo>`
+-------|---------
+Teorema | `thm`
+Definición | `def`
+Ejemplo | `exm`
+Ejercicio | `exr`
+
+## Demostraciones y soluciones
+
+\
+
+::: {layout="[[50,50]]"}
+```{md, "code-line-numbers"=FALSE}
+::: {.solution}
+Bla, bla, bla.
+:::
+```
+
+```{md, "code-line-numbers"=FALSE}
+::: {.proof}
+Bla, bla, bla.
+:::
+```
+
+:::
 
 
 # Más información {background-color=var(--presentation-heading-color)}
@@ -1583,3 +1700,13 @@ Más información sobre ejecución de código en el capítulo *Computations* de 
 - [Opciones de ejecución](https://quarto.org/docs/computations/execution-options.html)
 :::
 
+## Referencias cruzadas y Teoremas
+
+\
+
+Más información sobre Referencias cruzadas y Teoremas
+
+::: {.nonincremental}
+- En la [documentación de Quarto](https://quarto.org/docs/authoring/cross-references.html)
+- En la documentación del [filtro de Pandoc `pandoc-crossrefs`](https://lierdakil.github.io/pandoc-crossref/)
+:::

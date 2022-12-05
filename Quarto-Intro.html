@@ -1867,6 +1867,165 @@ print(x+y)
 </div>
 </section></section>
 <section>
+<section id="referencias-cruzadas" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Referencias cruzadas</h1>
+
+</section>
+<section id="referencias-cruzadas-ejemplo" class="slide level2">
+<h2>Referencias cruzadas: Ejemplo</h2>
+<p>&nbsp;</p>
+<div id="fig-quarto" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/quarto-logo.png" style="height:5.0%"></p>
+<p></p><figcaption>Figura&nbsp;1: Logo de Quarto</figcaption><p></p>
+</figure>
+</div>
+<p><br>
+</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 2.0%;justify-content: center;">
+<p>…</p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+<p>La <a href="#/fig-quarto">Figura&nbsp;1</a> muestra el logo de Quarto.</p>
+</section>
+<section id="referencias-cruzadas-sintaxis" class="slide level2">
+<h2>Referencias cruzadas: Sintaxis</h2>
+<p><br>
+</p>
+<p><strong>Crear</strong></p>
+<p><code>#&lt;tipo&gt;-&lt;identificador&gt;</code></p>
+<p><br>
+</p>
+<div class="fragment">
+<p><strong>Citar</strong></p>
+<p><code>@&lt;tipo&gt;-&lt;identificador&gt;</code></p>
+</div>
+</section>
+<section id="referencias-cruzadas-algunos-tipos" class="slide level2">
+<h2>Referencias cruzadas: Algunos tipos</h2>
+<p><br>
+</p>
+<table>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th><code>&lt;tipo&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Figuras</td>
+<td><code>fig</code></td>
+</tr>
+<tr class="even">
+<td>Tablas</td>
+<td><code>tbl</code></td>
+</tr>
+<tr class="odd">
+<td>Ecuaciones</td>
+<td><code>eq</code></td>
+</tr>
+<tr class="even">
+<td>Secciones</td>
+<td><code>sec</code></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="teoremas" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
+<h1>Teoremas</h1>
+
+</section>
+<section id="teoremas-ejemplo" class="slide level2">
+<h2>Teoremas: Ejemplo</h2>
+<p><br>
+</p>
+<div id="thm-ptg" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1 (Teorema de Pitágoras) </strong></span>En un triángulo rectángulo con hipotenusa de longitud <span class="math inline">\(h\)</span> y catetos de longitudes <span class="math inline">\(c_1\)</span> y <span class="math inline">\(c_2\)</span> se cumple que <span class="math display">\[
+h^2 = c_1^2 + c_2^2
+\]</span></p>
+</div>
+<p>El <a href="#/thm-ptg">Teorema&nbsp;1</a>, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.</p>
+</section>
+<section id="teoremas-ejemplo-1" class="slide level2">
+<h2>Teoremas: Ejemplo</h2>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>::: {#thm-ptg}</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teorema de Pitágoras</span></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>h^2 = c_1^2 + c_2^2</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="teoremas-algunos-tipos" class="slide level2">
+<h2>Teoremas: Algunos tipos</h2>
+<p><br>
+</p>
+<table>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th><code>&lt;tipo&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Teorema</td>
+<td><code>thm</code></td>
+</tr>
+<tr class="even">
+<td>Definición</td>
+<td><code>def</code></td>
+</tr>
+<tr class="odd">
+<td>Ejemplo</td>
+<td><code>exm</code></td>
+</tr>
+<tr class="even">
+<td>Ejercicio</td>
+<td><code>exr</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="demostraciones-y-soluciones" class="slide level2">
+<h2>Demostraciones y soluciones</h2>
+<p><br>
+</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode cell-code" id="cb71" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode cell-code" id="cb72" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>::: {.proof}</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
 <section id="más-información" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
 <h1>Más información</h1>
 
@@ -1947,6 +2106,18 @@ print(x+y)
 <li><a href="https://quarto.org/docs/computations/python.html">Usar Python</a></li>
 <li><a href="https://quarto.org/docs/computations/r.html">Usar R</a></li>
 <li><a href="https://quarto.org/docs/computations/execution-options.html">Opciones de ejecución</a></li>
+</ul>
+</div>
+</section>
+<section id="referencias-cruzadas-y-teoremas" class="slide level2">
+<h2>Referencias cruzadas y Teoremas</h2>
+<p><br>
+</p>
+<p>Más información sobre Referencias cruzadas y Teoremas</p>
+<div>
+<ul>
+<li>En la <a href="https://quarto.org/docs/authoring/cross-references.html">documentación de Quarto</a></li>
+<li>En la documentación del <a href="https://lierdakil.github.io/pandoc-crossref/">filtro de Pandoc <code>pandoc-crossrefs</code></a></li>
 </ul>
 </div>
 <div class="footer footer-default">
