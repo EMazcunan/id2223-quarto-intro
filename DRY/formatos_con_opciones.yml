@@ -1,0 +1,5 @@
+format:
+    html: 
+      theme: slate
+    pdf: 
+      keep-tex: true

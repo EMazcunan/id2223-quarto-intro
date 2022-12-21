@@ -1,0 +1,1 @@
+Se llega a  $x^2 = 4$, de donde $x=\pm 2$.

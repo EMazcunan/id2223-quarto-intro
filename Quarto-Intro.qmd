@@ -23,6 +23,8 @@ editor:
 
 # ¿Qué es Quarto? {background-color=var(--presentation-heading-color)}
 
+
+
 ## Quarto 
 
 \ 
@@ -47,7 +49,6 @@ editor:
 
 \
 
----
 
 ## Flujo Quarto
 
@@ -57,7 +58,9 @@ editor:
 
 \
 
-[`qmd` = Quarto Markdown]{style="display:block;text-align:center"}&nbsp;
+::: {style="text-align:center"}
+`qmd` = Quarto Markdown
+:::
 
 ## Markdown
 
@@ -77,7 +80,7 @@ editor:
 # Instalación {background-color=var(--presentation-heading-color)}
 
 
----
+## {data-menu-title="Instalación"}
 
 \
 
@@ -114,6 +117,7 @@ Extensión [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.q
 
 ## Crear documento de Quarto 
 
+<!-- TODO: Cambiar por diapositiva seminario 2022-12-20 -->
 \
 
 - Extensión `.qmd` (Quarto Markdown)
@@ -123,7 +127,8 @@ Extensión [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.q
 
   ::: {style="margin-left:2em;"}
 
-  ```{md "code-line-numbers"=FALSE}
+  ```{md}
+  #| code-line-numbers: false
   ---
   <Cabecera YAML>
   ---
@@ -132,12 +137,13 @@ Extensión [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.q
   ```
   :::
 
-## {background-color=var(--ex-bg)}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg)}
 Crea un documento con los siguientes contenidos
 
 \
 
-```{md "code-line-numbers"="|1-4|2|3|6|"}
+```{md}
+#| code-line-numbers: "|1-4|2|3|6|"
 ---
 title: Introducción a Quarto
 author: Tu nombre aquí
@@ -150,79 +156,19 @@ Hola Quarto
 
 Guárdalo como `quarto-ejemplo.qmd`
 
-## Compilar: `quarto render` {visibility="hidden"}
 
-\ 
-
-
-``` bash
-quarto render quarto-ejemplo.qmd
-```
-
-
-Compila el documento a todos los formatos especificados\
- (HTML por defecto)
-
-. . . 
-
-\ 
-
-``` bash
-quarto render quarto-ejemplo.qmd --to pdf
-quarto render quarto-ejemplo.qmd --to html
-```
-
-
-Compila el documento solo al formato especificado con `--to`
-
-## Compilar y previsualizar: `quarto preview` {visibility="hidden"}
-
-\ 
-
-
-``` bash
-quarto preview quarto-ejemplo.qmd
-```
-
-Compila el documento a todos los formatos especificados en el documento (HTML por defecto) y lo previsualiza
-
-
-. . .
-
-\ 
-
-``` bash
-quarto preview quarto-ejemplo.qmd --to pdf
-quarto render quarto-ejemplo.qmd --to html
-```
-
-Compila el documento solo al formato especificado con `--to` y lo previsualiza
-
-
-. . . 
-
-``` bash
-quarto render quarto-ejemplo.qmd --to pdf
-```
-
-Compila el documento al formato especificado
 
 ## Compilar
 
 \
 
-::: {layout="[-1,2,-1]"}
-
-![](images/render.png){width="100%"}&nbsp;
-
+::: {style="vertical-align:middle;"}
+![](images/render.png){fig-align="center" height="300px"}
 :::
 
+\
 
-&nbsp;\
-
-
-
-## {background-color=var(--ex-bg) .center style="text-align:center"}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center style="text-align:center"}
 
 Compila tu documento.
 
@@ -230,61 +176,12 @@ Compila tu documento.
 
 . . . 
 
-Haz un mínimo cambio 
-<br>
-(ej. `Hola Quarto` $\rightarrow$ `Hola Quarto.` )
-<br>
-compila de nuevo
-<br>
+Haz un mínimo cambio \
+(ej. `Hola Quarto` $\rightarrow$ `Hola Quarto.` ) \
+compila de nuevo \
 y verifica que los cambios se reflejan en el visor <br> *Quarto Preview*.
 
 
-## Compilar desde IDE {visibility="hidden"}
-
-::: {.r-stack}
-![](images/render.png){height="100%"}&nbsp;
-
-![](images/render2.png){height="100%"}&nbsp;
-:::
-
-::: {.fragment fragment-index=2 .fade-in-then-remove .nonincremental}
-`Render` 
-
-- Guarda
-- Compila al primer formato
-(HTML por defecto)
-- Previsualiza
-:::
-
-::: {.fragment fragment-index=3 .nonincremental}
-`Render DOCX` / `Render HTML` / `Render PDF`
-
-- Guarda
-- Compila al correspondiente formato
-- Previsualiza
-:::
-
-## {background-color=var(--ex-bg) .center visibility="hidden"}
-
-Compila tu documento usando
-
-\ 
-
-1. `Render` 
-1. `Render PDF`
-
-## Autocompilado {visibility="hidden"}
-
-\
-
-```{yaml "code-line-numbers"=FALSE}
-editor:
-    render-on-save: true
-```
-
-\
-
-`Render` cada vez que se guarda el documento (`Ctrl + S`)
 
 
 
@@ -294,7 +191,8 @@ editor:
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 format:
     html: default
     pdf: default
@@ -308,32 +206,22 @@ format:
 
 ::: {.fragment fragment-index=1 .fade-in-then-remove}
 ```{yaml}
-format:
-    html: 
-        theme: slate
-    pdf: 
-        keep-tex: true
+#| file: "DRY/formatos_con_opciones.yml"
 ```
 :::
  
 
 ::: {.fragment fragment-index=2 .fade-in-then-remove}
-```{yaml "code-line-numbers"="3"}
-format:
-    html: 
-        theme: slate
-    pdf: 
-        keep-tex: true
+```{yaml}
+#| file: "DRY/formatos_con_opciones.yml"
+#| code-line-numbers: "3"
 ```
 :::
 
 ::: {.fragment fragment-index=3 .fade-in-then-remove}
-```{yaml "code-line-numbers"="5"}
-format:
-    html: 
-        theme: slate
-    pdf: 
-        keep-tex: true
+```{yaml}
+#| file: "DRY/formatos_con_opciones.yml"
+#| code-line-numbers: "5"
 ```
 :::
 
@@ -344,17 +232,14 @@ format:
 [Conserva el archivo `.tex` generado]{.fragment fragment-index=3 .fade-in-then-remove}
 
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 Añade
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
-format:
-    html: 
-        theme: slate
-    pdf: 
-        keep-tex: true
+```{yaml}
+#| code-line-numbers: false
+#| file: "DRY/formatos_con_opciones.yml"
 ```
 
 \
@@ -363,25 +248,15 @@ a la cabecera YAML de tu documento
 
 
 
-## {background-color=var(--ex-bg) .center visibility="hidden"} 
 
-Compila tu documento usando
-
-\ 
-
-1. `Render` 
-1. `Render PDF` 
-    - Verifica que se ha creado `quarto-ejemplo.tex`
-    - Ábrelo
-
-
-##  {background-color=var(--ex-bg) .center}
+##  {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Cambia las opciones del formato HTML usando
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 format:
     html: 
         theme:
@@ -391,8 +266,6 @@ format:
 
 
 # Secciones {background-color=var(--presentation-heading-color)}
-
-
 
 
 ## Crear secciones
@@ -408,14 +281,15 @@ Sintaxis | Resultado
 `###### Título` | Encabezado nivel 6
 
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 
 Añade dos secciones escribiendo en tu documento:
 
 \
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 # Primera sección
 
 Lorem ipsum
@@ -431,7 +305,8 @@ Dolor sit amet
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 number-sections: true
 ```
 
@@ -439,7 +314,8 @@ number-sections: true
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 toc: true
 ```
 
@@ -449,18 +325,20 @@ toc: true
 
 Se puede personalizar la posición 
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 toc-location: left
 ```
 
 
-##  {background-color=var(--ex-bg) .center}
+##  {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Numera las secciones de tu documento y crea una tabla de contenidos usando
 
 \
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 number-sections: true
 toc: true
 ```
@@ -479,7 +357,8 @@ La opción `lang` permite cambiar el idioma del documento y proporciona traducci
 - ...
 :::
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 lang: es
 ```
 
@@ -492,7 +371,8 @@ La opción `language` permite personalizar las traducciones automáticas del len
 
 \ 
 
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 lang: es
 language: 
     toc-title-document: "Índice" # defecto "Tabla de Contenidos"
@@ -503,10 +383,11 @@ language:
 Puedes consultar todos los valores personalizables vía la opción `language` [aquí](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml)
 :::
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Establece español como idioma del documento usando
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 lang: es
 ```
 y observa que el título para la tabla de contenidos está ahora en español.
@@ -516,7 +397,8 @@ y observa que el título para la tabla de contenidos está ahora en español.
 \
 
 Cambia el título de la tabla de contenidos a "Índice" usando
-```{yaml "code-line-numbers"=FALSE}
+```{yaml}
+#| code-line-numbers: false
 language: 
     toc-title-document: "Índice"
 ```
@@ -528,21 +410,24 @@ language:
 
 \
 
-```{md "code-line-numbers"=FALSE}
-aaa bbb  ccc    ddd             eee
+```{md}
+#| code-line-numbers: false
+#| file: "DRY/espaciado_horizontal.md"
 ```
 
-aaa bbb  ccc    ddd             eee 
+{{< include DRY/espaciado_horizontal.md >}}
 
 . . . 
 
 \
 
-```{md "code-line-numbers"=FALSE}
-aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee
+
+```{md}
+#| code-line-numbers: false
+#| file: "DRY/espaciado_horizontal_2.md"
 ```
 
-aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee
+{{< include DRY/espaciado_horizontal_2.md >}}
 
 
 ## Vertical: Nueva línea
@@ -550,32 +435,31 @@ aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee
 \
 
 
-```{md "code-line-numbers"=FALSE}
-Lorem ipsum.\
-Dolor sit amet.
+```{md}
+#| code-line-numbers: false
+#| file: "DRY/nueva_linea.md"
 ```
-Lorem ipsum.\
-Dolor sit amet.
+
+{{< include DRY/nueva_linea.md >}}
 
 
 ## Vertical: Nuevo párrafo
 
 \
 
-```{md "code-line-numbers"=FALSE}
-Lorem ipsum.
-
-Dolor sit amet.
+```{md}
+#| code-line-numbers: false
+#| file: "DRY/nuevo_parrafo.md"
 ```
-Lorem ipsum.
 
-Dolor sit amet.
+{{< include DRY/nuevo_parrafo.md >}}
 
 . . . 
 
 \
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 Lorem ipsum.
 
 
@@ -588,20 +472,12 @@ Dolor sit amet.
 \ 
 
 
-```{md "code-line-numbers"=FALSE}
-Lorem ipsum.
-
-\
-\
-Dolor sit amet.
+```{md}
+#| code-line-numbers: false
+#| file: DRY/lineas_en_blanco.md
 ```
 
-
-Lorem ipsum.
-
-\
-\
-Dolor sit amet.
+{{< include DRY/lineas_en_blanco.md >}}
 
 # Ecuaciones {background-color=var(--presentation-heading-color)}
 
@@ -618,12 +494,12 @@ Sintaxis | Resultado
 Ver [más sobre ecuaciones](https://quarto.org/docs/authoring/markdown-basics.html#equations) en la documentación de Quarto.
 :::
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Añade una sección de título "Ecuaciones" y escribe el código que genere la siguiente salida:
 
 ::: {.card}
-Se llega a  $x^2 = 4$, de donde $x=\pm 2$.
+{{< include DRY/math_inline.md >}}
 :::
 
 
@@ -632,8 +508,9 @@ Se llega a  $x^2 = 4$, de donde $x=\pm 2$.
 **Solución**
     </summary>
 
-```{latex "code-line-numbers"=FALSE}
-Se llega a  $x^2 = 4$, de donde $x = \pm 2$.
+```{latex}
+#| code-line-numbers: false
+#| file: DRY/math_inline.md
 ```
 </details>
 
@@ -642,10 +519,7 @@ Se llega a  $x^2 = 4$, de donde $x = \pm 2$.
 Escribe el código que genere la siguiente salida:
 
 ::: {.card}
-La identidad de Euler es:
-$$
-    e^{ i \pi } + 1 = 0
-$$
+{{< include DRY/math_display.md >}}
 :::
 
 <details>
@@ -653,17 +527,15 @@ $$
 **Solución**
     </summary>
 
-```{latex "code-line-numbers"=FALSE}
-La identidad de Euler es:
-$$
-    e^{ i \pi } + 1 = 0
-$$
+```{latex}
+#| code-line-numbers: false
+#| file: DRY/math_display.md
 ```
 </details>
 
 # Formato de texto {background-color=var(--presentation-heading-color)}
 
----
+## {data-menu-title="Formato de texto"}
 
 \ 
 
@@ -675,14 +547,12 @@ Sintaxis | Resultado |
 [` [aaa]{.smallcaps} `]{.fragment fragment-index=4} |   [[aaa]{.smallcaps}]{.fragment fragment-index=4} | [(_small caps_)]{.fragment fragment-index=4}
 ||
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Escribe el código para conseguir el siguiente resultado:
 
 ::: {.card}
-_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.
-
-_Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir__ y sobre todo __fácil de leer__.
+{{< include DRY/formato_texto.md >}}
 :::
 
 <details>
@@ -690,10 +560,9 @@ _Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir_
 **Solución**
     </summary>
 
-```{md "code-line-numbers"=FALSE}
-_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.
-
-_Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir__ y sobre todo __fácil de leer__.
+```{md}
+#| code-line-numbers: false
+#| file: DRY/formato_texto.md
 ```
 </details>
 
@@ -704,7 +573,8 @@ _Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir_
 \ 
 
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 - Un item
 - Otro item
 - Otro item más
@@ -729,14 +599,12 @@ Hay que dejar **líneas en blanco** antes y después de la lista.
 Opcionalmente línea en blanco entre items (afecta al espaciado).
 
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Escribe el código para conseguir el siguiente resultado:
 
 ::: {.card .nonincremental}
-- Quarto
-- Pandoc
-- Markdown
+{{< include DRY/listas/no_numeradas.md >}}
 :::
 
 <details>
@@ -744,10 +612,9 @@ Escribe el código para conseguir el siguiente resultado:
 **Solución**
     </summary>
 
-```{md "code-line-numbers"=FALSE}
-- Quarto
-- Pandoc
-- Markdown
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/no_numeradas.md
 ```
 </details>
 
@@ -755,21 +622,19 @@ Escribe el código para conseguir el siguiente resultado:
 
 \
 
-```{md "code-line-numbers"=FALSE}
-1. Primer item
-2. Segundo item 
-3. Tercer item
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/numeradas.md
 ```
 
 ::: {.nonincremental}
-1. Primer item
-2. Segundo item 
-3. Tercer item
+{{< include DRY/listas/numeradas.md >}}
 :::
 
 . . . 
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 1. Primer item
 1. Segundo item 
 1. Tercer item
@@ -781,36 +646,33 @@ Escribe el código para conseguir el siguiente resultado:
  
 \ 
 
-```{md "code-line-numbers"=FALSE}
-a. Primer item
-b. Segundo item 
-c. Tercer item
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/numeradas_a.md
 ```
 
 ::: {.nonincremental}
-a. Primer item
-b. Segundo item 
-c. Tercer item
+{{< include DRY/listas/numeradas_a.md >}}
 :::
 
 . . . 
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 a. Primer item
 a. Segundo item 
 a. Tercer item
 ```
 
 
-
-
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Comprueba que los siguientes fragmentos de código producen listas convenientemente numeradas:
 
 \
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 1. Primer item
 2. Segundo item 
 2. Tercer item
@@ -818,7 +680,8 @@ Comprueba que los siguientes fragmentos de código producen listas convenienteme
 
 \ 
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 a. Primer item
 a. Segundo item 
 b. Tercer item
@@ -829,22 +692,13 @@ b. Tercer item
 
 \
 
-```{md "code-line-numbers"=FALSE}
-1. Primer item
-    a. Subitem a
-    a. Suitem b
-1. Segundo item 
-1. Tercer item
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/anidadas.md
 ```
 
-
-
 ::: {.nonincremental}
-1. Primer item
-    a. Subitem a
-    a. Suitem b
-1. Segundo item 
-1. Tercer item
+{{< include DRY/listas/anidadas.md >}}
 :::
 
 
@@ -853,11 +707,7 @@ b. Tercer item
 \ 
 
 ::: {.nonincremental}
-Término 1
-: Descripción del término 1
-
-Término 2
-: Descripción del término 2
+{{< include DRY/listas/descriptivas.md >}}
 ::: 
 
 
@@ -866,25 +716,18 @@ Término 2
 . . .
 
 
-```{md "code-line-numbers"=FALSE}
-Término 1
-: Descripción del término 1
-
-Término 2
-: Descripción del término 2
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/descriptivas.md
 ```
 
 
-## {background-color=var(--ex-bg) .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .scrollable}
 
 Escribe el código para conseguir el siguiente resultado:
 
 ::: {.card .nonincremental}
-Pandoc
-: Conversor de todo a todo.
-
-Markdown
-: Fácil de leer y de escribir.
+{{< include DRY/listas/descriptivas2.md >}}
 :::
 
 <details>
@@ -892,12 +735,9 @@ Markdown
 **Solución**
     </summary>
 
-```{md "code-line-numbers"=FALSE}
-Pandoc
-: Conversor de todo a todo.
-
-Markdown
-: Fácil de leer y de escribir.
+```{md}
+#| code-line-numbers: false
+#| file: DRY/listas/descriptivas2.md
 ```
 </details>
 
@@ -910,19 +750,14 @@ Markdown
 
 \
 
-```{md "code-line-numbers"=FALSE}
-Encabezado 1 | Encabezado 2
--------------|-------------
-aaa          | bbb
-ccc          | ddd
+```{md}
+#| code-line-numbers: false
+#| file: DRY/tablas/basica.md
 ```
 
 \
 
-Encabezado 1 | Encabezado 2
--------------|-------------
-aaa          | bbb
-ccc          | ddd
+{{< include DRY/tablas/basica.md >}}
 
 
 ## Tablas: Sintaxis básica
@@ -934,7 +769,8 @@ No es preciso que los caractéres `|` estén alineados
 \
 
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 Encabezado 1 | Encabezado 2
 --- | ---
 aaa | bbb
@@ -943,16 +779,12 @@ ccc| ddd
 
 
 
-## {background-color=var(--ex-bg)  .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg)  .scrollable}
 
 Escribe el código para conseguir el siguiente resultado:
 
 ::: {.card .nonincremental}
-Nombre | Apellidos
---- | ---
-Antonio | Pérez González
-Bernardo | García Pérez
-César | González García
+{{< include DRY/tablas/basica2.md >}}
 :::
 
 <details>
@@ -960,26 +792,20 @@ César | González García
 **Solución**
     </summary>
 
-```{md "code-line-numbers"=FALSE}
-Nombre | Apellidos
---- | ---
-Antonio | Pérez González
-Bernardo | García Pérez
-César | González García
+```{md}
+#| code-line-numbers: false
+#| file: DRY/tablas/basica2.md
 ```
 </details>
 
 
-## {background-color=var(--ex-bg)  .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg)  .scrollable}
 
 Duplica la tabla anterior y modifica los delimitadores del encabezado así:
 
-```{md "code-line-numbers"=FALSE}
-Nombre | Apellidos
----: | :---:
-Ana | Pérez González
-Bernardo | García Pérez
-Carlos | González García
+```{md}
+#| code-line-numbers: false
+#| file: DRY/tablas/align.md
 ```
  
 ¿Qué resultado aprecias?
@@ -990,33 +816,27 @@ Carlos | González García
     </summary>
 El resultado es
 
-Nombre | Apellidos
----: | :---:
-Ana | Pérez González
-Bernardo | García Pérez
-Carlos | González García
+{{< include DRY/tablas/align.md >}}
 
 La primera columna queda alineada a la derecha (por `---:`).
 
 Y la segunda columna queda centrada (por `:---:`).
 </details>
 
-## {background-color=var(--ex-bg)  .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg)  .scrollable}
 Crea una tabla en la que el contenido de las celdas de la segunda columna, supere la anchura de una línea.
 
 Por ejemplo:
 
-Herramienta | Descripción
---- | ---
-LaTeX | Sistema tipográfico de alta calidad   para la producción de documentos técnicos y científicos.
-Quarto | Sistema para la producción  de documentos técnicos y científicos basado en Pandoc.
+{{< include DRY/tablas/colwidths-A.md >}}
 
-## {background-color=var(--ex-bg)  .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg)  .scrollable}
 
 Deja una línea en blanco después de la tabla creada y, en la siguiente línea, escribe 
 
-```{md "code-line-numbers"=FALSE}
-: {tbl-colwidths="[20,80]"}
+```{md}
+#| code-line-numbers: false
+#| file: DRY/tablas/colwidths-B.md
 ```
 
 ¿Qué consigues?
@@ -1027,12 +847,8 @@ Deja una línea en blanco después de la tabla creada y, en la siguiente línea,
     </summary>
 El resultado es
 
-Herramienta | Descripción
---- | ---
-LaTeX | Sistema tipográfico de alta calidad   para la producción de documentos técnicos y científicos.
-Quarto | Sistema para la producción  de documentos técnicos y científicos basado en Pandoc.
-
-: {tbl-colwidths="[20,80]"}
+{{< include DRY/tablas/colwidths-A.md >}}
+{{< include DRY/tablas/colwidths-B.md >}}
 
 Se trata de la misma tabla con columnas de anchura $20\%$ y $80\%$ (por `tbl-colwidths="[20,80]"`).  
 </details>
@@ -1053,12 +869,12 @@ Sintaxis | Resultado
 : {tbl-colwidths="[60,40]"}
 
 
-## {background-color=var(--ex-bg) .center}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center}
 
 Escribe el código necesario para crear el siguiente resultado, donde el link abre `https://quarto.org`
 
 ::: {.card}
-Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
+{{< include DRY/links_imagenes/link.md >}}
 :::
 
 <details>
@@ -1066,8 +882,9 @@ Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
 **Solución**
     </summary>
 
-```{md "code-line-numbers"=FALSE}
-Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
+```{md}
+#| code-line-numbers: false
+#| file: DRY/links_imagenes/link.md
 ```
 </details>
 
@@ -1085,7 +902,8 @@ Puedes consultar la documentación de Quarto [aquí](https://quarto.org).
 
 __Ejemplo__
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 ![](images/quarto-logo.png)
 ```
 
@@ -1093,14 +911,15 @@ __Ejemplo__
 
 
 
-## {background-color=var(--ex-bg) .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .scrollable}
 
 Descarga el logo de Quarto de\ 
 <https://quarto.org/quarto.png>\
 y guárdalo en la ubicación oportuna para que funcione el código siguiente:
 
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 El logo de Quarto es ![](images/quarto.png)
 ```
 
@@ -1126,7 +945,8 @@ La imagen debe llamarse `quarto.png` y estar ubicada en una carpeta de nombre `i
 
 __Ejemplo__
 
-```{md "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 ![Logo de Quarto](images/quarto-logo.png){
     fig-align=center
     width="5%"
@@ -1148,12 +968,13 @@ El texto solo aparece como _caption_ si la imagen ocupa su propio párrafo (entr
 
 
 
-## {background-color=var(--ex-bg) .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .scrollable}
 
 Duplica el código anterior para incluir el logo de Quarto y modifícalo así:
 
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 El logo de Quarto es
 
 ![](images/quarto.png){
@@ -1190,19 +1011,21 @@ La imagen queda centrada (por `fig-align="center"`) y ocupa el `20%` de la anchu
 
 __Ejemplos__
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 {{< video https://youtu.be/gsw-de5xcCU >}}
 ```
 
 . . . 
 
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 {{< video videos/video.mp4 >}}
 ```
 
 
-## {background-color=var(--ex-bg) .center .scrollable style="text-align:center;"}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center .scrollable style="text-align:center;"}
 
 Busca cualquier vídeo en YouTube,<br> obtén su URL con el botón **Compartir**, <br> e inclúyelo en tu documento con la sintaxis
 
@@ -1218,22 +1041,19 @@ Busca cualquier vídeo en YouTube,<br> obtén su URL con el botón **Compartir**
 # Callouts {background-color=var(--presentation-heading-color)}
 
 
----
+## {data-menu-title="Callouts"}
 
 \ 
 
-::: {.callout-note}
-Los _callouts_ son una forma de destacar contenidos.  
-:::
+{{< include DRY/callouts/note.md >}}
 
 \ 
 
 . . . 
 
-``` {md "code-line-numbers"=FALSE}
-::: {.callout-note}
-Los _callouts_ son una forma de destacar contenido.  
-:::
+``` {md}
+#| code-line-numbers: false
+#| file: DRY/callouts/note.md
 ```
 
 ## Callouts: Tipos
@@ -1262,14 +1082,12 @@ Los _callouts_ son una forma de destacar contenido.
 
 ::::
 
-## {background-color=var(--ex-bg) .center .scrollable}
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center .scrollable}
 
 Crea el siguiente _callout_ (`.callout-important`)
 
 :::: {.card}
-::: {.callout-important}
-Esto es importante.
-:::
+{{< include DRY/callouts/important.md >}}
 ::::
 
 
@@ -1279,10 +1097,9 @@ Esto es importante.
 **Solución**
     </summary>
 
-``` {md "code-line-numbers"=FALSE}
-::: {.callout-important}
-Esto es importante.
-:::
+``` {md}
+#| code-line-numbers: false
+#| file: DRY/callouts/important.md
 ```
 
 </details>
@@ -1303,7 +1120,8 @@ Son una forma de destacar contenidos
 . . . 
 
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 ::: {.callout-note}
 ## Utilidad de los _callouts_
 Son una forma de destacar contenidos
@@ -1324,14 +1142,15 @@ Son una forma de destacar contenidos
 . . . 
 
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 ::: {.callout-note collapse="true"}
 ## Utilidad de los _callouts_
 Son una forma de destacar contenidos
 :::
 ```
 
-## {background-color=var(--ex-bg) .center .scrollable }
+## {data-menu-title="Ejercicio" background-color=var(--ex-bg) .center .scrollable }
 
 
 Duplica el _callout_ anterior y añade el código necesario para conseguir:
@@ -1347,7 +1166,8 @@ Duplica el _callout_ anterior y añade el código necesario para conseguir:
 **Solución**
     </summary>
 
-``` {md "code-line-numbers"=FALSE}
+``` {md}
+#| code-line-numbers: false
 ::: {.callout-important collapse="true"}
 ## Muy importante
 Esto es importante.
@@ -1371,18 +1191,19 @@ Esto es importante.
 
 \
 
-````
-```
-x = 1
-y = 2
 
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+print("```")
+with open('DRY/code/verbatim.md') as f:
+    for line in f:
+        print(line.rstrip("\n"))
+print("```")
 ```
-````
+
+
+
 :::
 
 ::: {.column width="50%"}
@@ -1391,16 +1212,15 @@ print(x+y)
 \
 
 
-```
-x = 1
-y = 2
+```{python}
+#| echo: false
+#| eval: true
+with open('DRY/code/verbatim.md') as f:
+    for line in f:
+        print(line.rstrip("\n"))
 
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
 ```
+
 :::
 ::::
 
@@ -1417,18 +1237,16 @@ print(x+y)
 
 \
 
-````
-```python
-x = 1
-y = 2
 
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+print("```python")
+with open('DRY/code/verbatim.md') as f:
+    for line in f:
+        print(line.rstrip("\n"))
+print("```")
 ```
-````
 
 :::
 
@@ -1437,16 +1255,15 @@ print(x+y)
 
 \
 
-
-```python
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+#| output: asis
+print("```python")
+with open('DRY/code/verbatim.md') as f:
+    for line in f:
+        print(line.rstrip("\n"))
+print("```")
 ```
 
 :::
@@ -1466,18 +1283,15 @@ print(x+y)
 \
 
 
-````
-```{{python}}
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+print("```{python}")
+with open('DRY/code/verbatim.md') as f:
+    for line in f:
+        print(line.rstrip("\n"))
+print("```")
 ```
-````
 
 
 ::::
@@ -1487,18 +1301,11 @@ print(x+y)
 
 \
 
-
 ```{python}
 #| eval: true
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+#| file: DRY/code/verbatim.md
 ```
+
 ::::
 
 :::::
@@ -1563,15 +1370,7 @@ Secciones | `sec`
 
 \
 
-::: {#thm-ptg}
-## Teorema de Pitágoras
-En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que
-$$
-h^2 = c_1^2 + c_2^2
-$$
-:::
-
-El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.
+{{< include DRY/teoremas/pitagoras.md >}}
 
 
 ## Teoremas: Ejemplo
@@ -1579,16 +1378,9 @@ El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los m�
 \
 
 
-```{md, "code-line-numbers"=FALSE}
-::: {#thm-ptg}
-## Teorema de Pitágoras
-En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que
-$$
-h^2 = c_1^2 + c_2^2
-$$
-:::
-
-El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.
+```{md}
+#| code-line-numbers: false
+#| file: DRY/teoremas/pitagoras.md
 ```
 
 ## Teoremas: Algunos tipos
@@ -1607,13 +1399,15 @@ Ejercicio | `exr`
 \
 
 ::: {layout="[[50,50]]"}
-```{md, "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 ::: {.solution}
 Bla, bla, bla.
 :::
 ```
 
-```{md, "code-line-numbers"=FALSE}
+```{md}
+#| code-line-numbers: false
 ::: {.proof}
 Bla, bla, bla.
 :::
