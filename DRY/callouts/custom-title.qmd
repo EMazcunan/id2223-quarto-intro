@@ -1,0 +1,4 @@
+::: {.callout-note}
+## Utilidad de los _callouts_
+Son una forma de destacar contenidos
+:::

@@ -410,7 +410,7 @@ Eva María Mazcuñán Navarro
 <h2>Quarto</h2>
 <p>&nbsp;</p>
 
-<img data-src="images/quarto-logo.png" class="r-strecht r-stretch quarto-figure-center"><blockquote>
+<img data-src="images/quarto-logo.png" class="r-stretch quarto-figure-center"><blockquote>
 <p>Quarto is an open-source scientific and technical publishing system built on Pandoc.</p>
 </blockquote>
 <p>– <cite><a href="https://quarto.org">Quarto</a></cite></p>
@@ -422,7 +422,7 @@ Eva María Mazcuñán Navarro
 <p><br>
 </p>
 
-<img data-src="images/swiss.jpg" class="r-strecht r-stretch quarto-figure-center"><blockquote>
+<img data-src="images/swiss.jpg" class="r-stretch quarto-figure-center"><blockquote>
 <p>If you need to convert files from one markup format into another, pandoc is your swiss-army knife.</p>
 </blockquote>
 <p>– <cite><a href="https://pandoc.org/">Pandoc</a></cite></p>
@@ -485,7 +485,7 @@ edición y compilación</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
 <p>Extensión <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a><br>
-<span style="display:block;margin: auto;vertical-align:middle">para <img data-src="images/vscode-logo.png" style="vertical-align:middle;height:1em"> <span style="vertical-align:middle">VS Code</span></span></p>
+<span style="display:block;margin:auto;vertical-align:middle">para <img data-src="images/vscode-logo.png" style="vertical-align:middle;height:1em"> <span style="vertical-align:middle">VS Code</span></span></p>
 </div>
 </div>
 </div>
@@ -507,13 +507,11 @@ edición y compilación</p>
 </p></li>
 <li class="fragment"><p>Estructura</p>
 <div style="margin-left:2em;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;Cabecera YAML&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;Contenidos&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div></li>
 </ul>
 </section>
@@ -522,14 +520,12 @@ edición y compilación</p>
 <p>Crea un documento con los siguientes contenidos</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|1-4|2|3|6|"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<div class="sourceCode" id="cb2" data-code-line-numbers="|1-4|2|3|6|"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> Introducción a Quarto</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="an">author:</span><span class="co"> Tu nombre aquí</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="co">---</span></span>
 <span id="cb2-5"><a href="#cb2-5"></a></span>
 <span id="cb2-6"><a href="#cb2-6"></a>Hola Quarto</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><br>
 </p>
 <p>Guárdalo como <code>quarto-ejemplo.qmd</code></p>
@@ -569,42 +565,34 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <h2>Formatos sin opciones</h2>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="formatos-con-opciones" class="slide level2">
 <h2>Formatos con opciones</h2>
 <p><br>
 </p>
 <div class="fragment fade-in-then-remove" data-fragment-index="1">
-<div class="cell" data-file="DRY/formatos_con_opciones.yml">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> slate</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="at">      </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 <div class="fragment fade-in-then-remove" data-fragment-index="2">
-<div class="cell" data-file="DRY/formatos_con_opciones.yml">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb5" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> slate</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="at">      </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 <div class="fragment fade-in-then-remove" data-fragment-index="3">
-<div class="cell" data-file="DRY/formatos_con_opciones.yml">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb6" data-code-line-numbers="5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> slate</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb6-5"><a href="#cb6-5"></a><span class="at">      </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 <p><br>
 </p>
@@ -616,13 +604,11 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <p>Añade</p>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/formatos_con_opciones.yml">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> slate</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><br>
 </p>
 <p>a la cabecera YAML de tu documento</p>
@@ -632,13 +618,11 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <p>Cambia las opciones del formato HTML usando</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">light</span><span class="kw">:</span><span class="at"> flatly</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section></section>
 <section>
 <section id="secciones" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
@@ -658,15 +642,15 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 </thead>
 <tbody>
 <tr class="odd">
-<td><code># Título</code></td>
+<td><code class="sourceCode markdown"><span class="fu"># Título</span></code></td>
 <td>Encabezado nivel 1</td>
 </tr>
 <tr class="even">
-<td><code>## Título</code></td>
+<td><code class="sourceCode markdown"><span class="fu">## Título</span></code></td>
 <td>Encabezado nivel 2</td>
 </tr>
 <tr class="odd">
-<td><code>### Título</code></td>
+<td><code class="sourceCode markdown"><span class="fu">### Título</span></code></td>
 <td>Encabezado nivel 3</td>
 </tr>
 <tr class="even">
@@ -674,7 +658,7 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <td></td>
 </tr>
 <tr class="odd">
-<td><code>###### Título</code></td>
+<td><code class="sourceCode markdown"><span class="fu">###### Título</span></code></td>
 <td>Encabezado nivel 6</td>
 </tr>
 </tbody>
@@ -685,38 +669,30 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <p>Añade dos secciones escribiendo en tu documento:</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Primera sección</span></span>
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Primera sección</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Lorem ipsum</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Segunda sección</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>Dolor sit amet</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="secciones-numeradas" class="slide level2">
 <h2>Secciones numeradas</h2>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tabla-de-contenidos" class="slide level2">
 <h2>Tabla de contenidos</h2>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p><br>
 </p>
 <p>Se puede personalizar la posición</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc-location</span><span class="kw">:</span><span class="at"> left</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc-location</span><span class="kw">:</span><span class="at"> left</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-6" class="slide level2 center" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
@@ -724,10 +700,8 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <p>Numera las secciones de tu documento y crea una tabla de contenidos usando</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section></section>
 <section>
 <section id="idioma" class="title-slide slide level1 center" data-background-color="var(--presentation-heading-color)">
@@ -746,9 +720,7 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <li>…</li>
 </ul>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="traducciones-alternativas" class="slide level2">
 <h2>Traducciones alternativas</h2>
@@ -756,12 +728,10 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 </p>
 <p>La opción <code>language</code> permite personalizar las traducciones automáticas del lenguaje especificado con <code>lang</code>.</p>
 <p>&nbsp;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span>
+<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc-title-document</span><span class="kw">:</span><span class="at"> </span><span class="st">"Índice"</span><span class="co"> # defecto "Tabla de Contenidos"</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">crossref-fig-title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Imagen"</span><span class="co"> # defecto "Figura"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="footer">
 <p>Puedes consultar todos los valores personalizables vía la opción <code>language</code> <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/language/_language.yml">aquí</a></p>
 </div>
@@ -769,18 +739,14 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <section id="section-7" class="slide level2 center" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
 <p>Establece español como idioma del documento usando</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb16" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> es</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>y observa que el título para la tabla de contenidos está ahora en español.</p>
 <div class="fragment">
 <p><br>
 </p>
 <p>Cambia el título de la tabla de contenidos a “Índice” usando</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> </span></span>
+<div class="sourceCode" id="cb17" data-code-line-numbers="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc-title-document</span><span class="kw">:</span><span class="at"> </span><span class="st">"Índice"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section></section>
 <section>
@@ -792,16 +758,12 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <h2>Horizontal (entre palabras)</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/espaciado_horizontal.md">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>aaa bbb  ccc    ddd             eee</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>aaa bbb  ccc    ddd             eee</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>aaa bbb ccc ddd eee</p>
 <div class="fragment">
 <p><br>
 </p>
-<div class="cell" data-file="DRY/espaciado_horizontal_2.md">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>aaa bbb \ ccc \ \ ddd \ \ \ \ \ eee</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>aaa bbb &nbsp;ccc &nbsp;&nbsp;ddd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eee</p>
 </div>
 </section>
@@ -809,10 +771,8 @@ y verifica que los cambios se reflejan en el visor <br> <em>Quarto Preview</em>.
 <h2>Vertical: Nueva línea</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/nueva_linea.md">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.\</span>
+<div class="sourceCode" id="cb20" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.\</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>Dolor sit amet.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Lorem ipsum.<br>
 Dolor sit amet.</p>
 </section>
@@ -820,35 +780,29 @@ Dolor sit amet.</p>
 <h2>Vertical: Nuevo párrafo</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/nuevo_parrafo.md">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
+<div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>Dolor sit amet.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Lorem ipsum.</p>
 <p>Dolor sit amet.</p>
 <div class="fragment">
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
+<div class="sourceCode" id="cb22" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>Dolor sit amet.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 </section>
 <section id="vertical-líneas-en-blanco" class="slide level2">
 <h2>Vertical: Líneas en blanco</h2>
 <p>&nbsp;</p>
-<div class="cell" data-file="DRY/lineas_en_blanco.md">
-<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
+<div class="sourceCode" id="cb23" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Lorem ipsum.</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>\</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>\</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>Dolor sit amet.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Lorem ipsum.</p>
 <p><br>
 <br>
@@ -872,11 +826,11 @@ Dolor sit amet.</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>$ ... $</code></td>
+<td><code class="sourceCode latex"><span class="ss">$ ... $</span></code></td>
 <td>Modo <em>inline</em></td>
 </tr>
 <tr class="even">
-<td><code>$$ ... $$</code></td>
+<td><code class="sourceCode latex"><span class="ss">$$ ... $$</span></code></td>
 <td>Modo <em>display</em></td>
 </tr>
 </tbody>
@@ -895,9 +849,7 @@ Dolor sit amet.</p>
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/math_inline.md">
-<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="false"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>Se llega a  <span class="ss">$x^2 = 4$</span>, de donde <span class="ss">$x=</span><span class="sc">\pm</span><span class="ss"> 2$</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb24" data-code-line-numbers="false"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>Se llega a  <span class="ss">$x^2 = 4$</span>, de donde <span class="ss">$x=</span><span class="sc">\pm</span><span class="ss"> 2$</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="section-9" class="slide level2 center" data-background-color="var(--ex-bg)">
@@ -912,12 +864,10 @@ Dolor sit amet.</p>
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/math_display.md">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="false"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>La identidad de Euler es:</span>
+<div class="sourceCode" id="cb25" data-code-line-numbers="false"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>La identidad de Euler es:</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    e^{ i </span><span class="sc">\pi</span><span class="ss"> } + 1 = 0</span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
 </section></section>
 <section>
@@ -943,22 +893,22 @@ Dolor sit amet.</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>*aaa*</code> <br> <code>_aaa_</code></td>
+<td><code class="sourceCode markdown">*aaa*</code> <br> <code class="sourceCode markdown">_aaa_</code></td>
 <td><em>aaa</em></td>
 <td>(itálica)</td>
 </tr>
 <tr class="even">
-<td><span class="fragment" data-fragment-index="2"><code>**aaa**</code> <br> <code>__aaa__</code></span></td>
+<td><span class="fragment" data-fragment-index="2"><code class="sourceCode markdown">**aaa**</code> <br> <code class="sourceCode markdown">__aaa__</code></span></td>
 <td><span class="fragment" data-fragment-index="2"><strong>aaa</strong></span></td>
 <td><span class="fragment" data-fragment-index="2">(negrita)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="fragment" data-fragment-index="3"><code>`aaa`</code></span></td>
+<td><span class="fragment" data-fragment-index="3"><code class="sourceCode markdown"><span class="in">`aaa`</span></code></span></td>
 <td><span class="fragment" data-fragment-index="3"><code>aaa</code></span></td>
 <td><span class="fragment" data-fragment-index="3">(verbatim)</span></td>
 </tr>
 <tr class="even">
-<td><span class="fragment" data-fragment-index="4"><code>[aaa]{.smallcaps}</code></span></td>
+<td><span class="fragment" data-fragment-index="4"><code class="sourceCode markdown"><span class="co">[</span><span class="ot">aaa</span><span class="co">]</span>{.smallcaps}</code></span></td>
 <td><span class="fragment" data-fragment-index="4"><span class="smallcaps">aaa</span></span></td>
 <td><span class="fragment" data-fragment-index="4">(<em>small caps</em>)</span></td>
 </tr>
@@ -981,11 +931,9 @@ Dolor sit amet.</p>
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/formato_texto.md">
-<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.</span>
+<div class="sourceCode" id="cb26" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>_Quarto_ se basa en _Pandoc_ y usa su variante de _markdown_ en la sintaxis de sus documentos.</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>_Markdown_ es un formato de texto plano diseñado para ser __fácil de escribir__ y sobre todo __fácil de leer__.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
 </section></section>
 <section>
@@ -996,11 +944,9 @@ Dolor sit amet.</p>
 <section id="listas-no-numeradas" class="slide level2">
 <h2>Listas no numeradas</h2>
 <p>&nbsp;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un item</span>
+<div class="sourceCode" id="cb27" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Un item</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Otro item</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Otro item más</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><br>
 </p>
 <div class="fragment">
@@ -1031,22 +977,18 @@ Dolor sit amet.</p>
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/listas/no_numeradas.md">
-<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto</span>
+<div class="sourceCode" id="cb28" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandoc</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Markdown</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
 </section>
 <section id="listas-numeradas" class="slide level2">
 <h2>Listas numeradas</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/listas/numeradas.md">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
+<div class="sourceCode" id="cb29" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Segundo item </span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div>
 <ol type="1">
 <li>Primer item</li>
@@ -1055,21 +997,17 @@ Dolor sit amet.</p>
 </ol>
 </div>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
+<div class="sourceCode" id="cb30" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Segundo item </span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 <section id="listas-numeradas-1" class="slide level2">
 <h2>Listas numeradas</h2>
 <p>&nbsp;</p>
-<div class="cell" data-file="DRY/listas/numeradas_a.md">
-<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
+<div class="sourceCode" id="cb31" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>b. Segundo item </span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>c. Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div>
 <ol type="a">
 <li>Primer item</li>
@@ -1078,11 +1016,9 @@ Dolor sit amet.</p>
 </ol>
 </div>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
+<div class="sourceCode" id="cb32" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>a. Segundo item </span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>a. Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 <section id="section-13" class="slide level2 center" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
@@ -1090,29 +1026,23 @@ Dolor sit amet.</p>
 <p>Comprueba que los siguientes fragmentos de código producen listas convenientemente numeradas:</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
+<div class="sourceCode" id="cb33" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Segundo item </span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>&nbsp;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
+<div class="sourceCode" id="cb34" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>a. Primer item</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>a. Segundo item </span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>b. Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="listas-anidadas" class="slide level2">
 <h2>Listas anidadas:</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/listas/anidadas.md">
-<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
+<div class="sourceCode" id="cb35" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer item</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    a. Subitem a</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    a. Suitem b</span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Segundo item </span>
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Tercer item</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div>
 <ol type="1">
 <li>Primer item
@@ -1143,13 +1073,11 @@ Descripción del término 2
 <p><br>
 </p>
 <div class="fragment">
-<div class="cell" data-file="DRY/listas/descriptivas.md">
-<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>Término 1</span>
+<div class="sourceCode" id="cb36" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>Término 1</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>: Descripción del término 1</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>Término 2</span>
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>: Descripción del término 2</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 <section id="section-14" class="slide level2 scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
@@ -1171,13 +1099,11 @@ Fácil de leer y de escribir.
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/listas/descriptivas2.md">
-<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Pandoc</span>
+<div class="sourceCode" id="cb37" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Pandoc</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>: Conversor de todo a todo.</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>Markdown</span>
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>: Fácil de leer y de escribir.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
 </section></section>
 <section>
@@ -1189,12 +1115,10 @@ Fácil de leer y de escribir.
 <h2>Tablas: Sintaxis básica</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/tablas/basica.md">
-<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
+<div class="sourceCode" id="cb38" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>-------------|-------------</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>aaa          | bbb</span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>ccc          | ddd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><br>
 </p>
 <table>
@@ -1223,12 +1147,10 @@ Fácil de leer y de escribir.
 <p>No es preciso que los caractéres <code>|</code> estén alineados</p>
 <p><br>
 </p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
+<div class="sourceCode" id="cb39" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>Encabezado 1 | Encabezado 2</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>--- | ---</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>aaa | bbb</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>ccc| ddd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="section-15" class="slide level2 scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
@@ -1261,25 +1183,21 @@ Fácil de leer y de escribir.
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/tablas/basica2.md">
-<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>Nombre | Apellidos</span>
+<div class="sourceCode" id="cb40" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>Nombre | Apellidos</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>--- | ---</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>Antonio | Pérez González</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>Bernardo | García Pérez</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>César | González García</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </details>
 </section>
 <section id="section-16" class="slide level2 scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
 <p>Duplica la tabla anterior y modifica los delimitadores del encabezado así:</p>
-<div class="cell" data-file="DRY/tablas/align.md">
-<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>Nombre | Apellidos</span>
+<div class="sourceCode" id="cb41" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>Nombre | Apellidos</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>---: | :---:</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>Ana | Pérez González</span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>Bernardo | García Pérez</span>
 <span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>Carlos | González García</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>¿Qué resultado aprecias?</p>
 <details>
 <summary>
@@ -1342,9 +1260,7 @@ Y la segunda columna queda centrada (por <code>:---:</code>).
 <section id="section-18" class="slide level2 scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
 <p>Deja una línea en blanco después de la tabla creada y, en la siguiente línea, escribe</p>
-<div class="cell" data-file="DRY/tablas/colwidths-B.md">
-<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>: {tbl-colwidths="<span class="co">[</span><span class="ot">20,80</span><span class="co">]</span>"}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb42" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>: {tbl-colwidths="<span class="co">[</span><span class="ot">20,80</span><span class="co">]</span>"}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>¿Qué consigues?</p>
 <details>
 <summary>
@@ -1397,15 +1313,15 @@ Se trata de la misma tabla con columnas de anchura <span class="math inline">\(2
 </thead>
 <tbody>
 <tr class="odd">
-<td><span style="font-size:0.85em"><code>&lt;https://quarto.org&gt;</code></span></td>
+<td><span style="font-size:0.85em"><code class="sourceCode markdown"><span class="ot">&lt;https://quarto.org&gt;</span></code></span></td>
 <td><a href="https://quarto.org" class="uri">https://quarto.org</a></td>
 </tr>
 <tr class="even">
-<td><span class="fragment" data-fragment-index="2" style="font-size:0.85em"><code>[Quarto](https://quarto.org)</code></span></td>
+<td><span class="fragment" data-fragment-index="2" style="font-size:0.85em"><code class="sourceCode markdown"><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span></code></span></td>
 <td><span class="fragment" data-fragment-index="2"><a href="https://quarto.org/">Quarto</a></span></td>
 </tr>
 <tr class="odd">
-<td><span class="fragment" data-fragment-index="3" style="font-size:0.85em"><code>[Quarto](https://quarto.org/ "Web de Quarto")</code></span></td>
+<td><span class="fragment" data-fragment-index="3" style="font-size:0.85em"><code class="sourceCode markdown"><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/ "Web de Quarto")</span></code></span></td>
 <td><span class="fragment" data-fragment-index="3"><a href="https://quarto.org/" title="Web de Quarto">Quarto</a></span></td>
 </tr>
 </tbody>
@@ -1421,22 +1337,18 @@ Se trata de la misma tabla con columnas de anchura <span class="math inline">\(2
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/links_imagenes/link.md">
-<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>Puedes consultar la documentación de Quarto <span class="co">[</span><span class="ot">aquí</span><span class="co">](https://quarto.org)</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb43" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>Puedes consultar la documentación de Quarto <span class="co">[</span><span class="ot">aquí</span><span class="co">](https://quarto.org)</span>.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="imágenes-sintaxis-básica" class="slide level2">
 <h2>Imágenes: Sintaxis básica</h2>
 <p><br>
 </p>
-<p><code>![](&lt;ruta del archivo&gt;)</code></p>
+<p><code class="sourceCode markdown"><span class="al">![](&lt;ruta del archivo&gt;)</span></code></p>
 <p>&nbsp;</p>
 <div class="fragment">
 <p><strong>Ejemplo</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/quarto-logo.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb44" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/quarto-logo.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img data-src="images/quarto-logo.png"></p>
 </div>
 </section>
@@ -1444,9 +1356,7 @@ Se trata de la misma tabla con columnas de anchura <span class="math inline">\(2
 <h2></h2>
 <p>Descarga el logo de Quarto de&nbsp; <a href="https://quarto.org/quarto.png" class="uri">https://quarto.org/quarto.png</a><br>
 y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es <span class="al">![](images/quarto.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb45" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es <span class="al">![](images/quarto.png)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <details>
 <summary>
 <strong>Solución</strong>
@@ -1458,16 +1368,14 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 <h2>Imágenes: Sintaxis general</h2>
 <p><br>
 </p>
-<p><code>![&lt;Texto&gt;](&lt;ruta del archivo&gt;){&lt;opciones&gt;}</code></p>
+<p><code class="sourceCode markdown"><span class="al">![&lt;Texto&gt;](&lt;ruta del archivo&gt;)</span>{<span class="kw">&lt;opciones&gt;</span>}</code></p>
 <p>&nbsp;</p>
 <div class="fragment">
 <p><strong>Ejemplo</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Logo de Quarto](images/quarto-logo.png)</span>{</span>
+<div class="sourceCode" id="cb46" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Logo de Quarto](images/quarto-logo.png)</span>{</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    fig-align=center</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    width="5%"</span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/quarto-logo.png" style="width:5.0%"></p>
@@ -1492,14 +1400,12 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 <section id="section-21" class="slide level2 scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
 <p>Duplica el código anterior para incluir el logo de Quarto y modifícalo así:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es</span>
+<div class="sourceCode" id="cb47" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>El logo de Quarto es</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/quarto.png)</span>{</span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    fig-align="center"</span>
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>    width="20%"</span>
 <span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>¿Qué cambios aprecias?</p>
 <details>
 <summary>
@@ -1517,26 +1423,22 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 <h2>Vídeos: Sintaxis básica</h2>
 <p><br>
 </p>
-<pre data-shortcodes="false"><code>{{&lt; video &lt;ruta&gt; &gt;}}</code></pre>
+<p><code class="sourceCode markdown" data-shortcodes="false">{{&lt; video <span class="kw">&lt;ruta&gt;</span> &gt;}}</code></p>
 <p><br>
 </p>
 <div class="fragment">
 <p><strong>Ejemplos</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/gsw-de5xcCU &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb48" data-code-line-numbers="false" data-shortcodes="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/gsw-de5xcCU &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video videos/video.mp4 &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb49" data-code-line-numbers="false" data-shortcodes="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video videos/video.mp4 &gt;}}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-22" class="slide level2 center scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)" style="text-align:center;">
 <h2></h2>
 <p>Busca cualquier vídeo en YouTube,<br> obtén su URL con el botón <strong>Compartir</strong>, <br> e inclúyelo en tu documento con la sintaxis</p>
 <div style="width:100%; text-align:center">
-<pre data-shortcodes="false" style="background-color:var(--ex-bg)!important; display:inline-block;width:fit-content;"><code>{{&lt; video ... &gt;}}</code></pre>
+<p><code class="sourceCode markdown" data-shortcodes="false" style="background-color:var(--ex-bg)!important;">{{&lt; video ... &gt;}}</code></p>
 </div>
 </section></section>
 <section>
@@ -1562,11 +1464,9 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 </div>
 <p>&nbsp;</p>
 <div class="fragment">
-<div class="cell" data-file="DRY/callouts/note.md">
-<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>Los _callouts_ son una forma de destacar contenidos.  </span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb50" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>Los _callouts_ son una forma de destacar contenidos.  </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="callouts-tipos" class="slide level2">
@@ -1653,7 +1553,7 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 </section>
 <section id="section-24" class="slide level2 center scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
 <h2></h2>
-<p>Crea el siguiente <em>callout</em> (<code>.callout-important</code>)</p>
+<p>Crea el siguiente <em>callout</em> (<code class="sourceCode markdown">.callout-important</code>)</p>
 <div class="card">
 <div class="callout callout-important callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1673,11 +1573,9 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell" data-file="DRY/callouts/important.md">
-<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb51" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="callouts-título-personalizado" class="slide level2">
@@ -1700,12 +1598,10 @@ y guárdalo en la ubicación oportuna para que funcione el código siguiente:</p
 <p><br>
 </p>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb52" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="callouts-colapsar" class="slide level2">
@@ -1720,12 +1616,10 @@ Son una forma de destacar contenidos
 <p><br>
 </p>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb55" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb53" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilidad de los _callouts_</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>Son una forma de destacar contenidos</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-25" class="slide level2 center scrollable" data-menu-title="Ejercicio" data-background-color="var(--ex-bg)">
@@ -1734,19 +1628,17 @@ Son una forma de destacar contenidos
 <div>
 <ul>
 <li>Título “Muy importante”</li>
-<li>Colapsable (<code>collapse="true"</code>)</li>
+<li>Colapsable (<code class="sourceCode markdown">collapse="true"</code>)</li>
 </ul>
 </div>
 <details>
 <summary>
 <strong>Solución</strong>
 </summary>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important collapse="true"}</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Muy importante</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb54" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important collapse="true"}</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Muy importante</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>Esto es importante.</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section></section>
 <section>
@@ -1763,30 +1655,20 @@ Son una forma de destacar contenidos
 <p><strong>Sintaxis</strong></p>
 <p><br>
 </p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>```</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x = 1
+<pre><code>```
+x = 1
 y = 2
 
 # Sumar
 z = x + y 
 
 # Imprimir
-print(x+y)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>```</code></pre>
-</div>
-</div>
+print(x+y)
+```</code></pre>
 </div><div class="column" style="width:50%;">
 <p><strong>Resultado</strong></p>
 <p><br>
 </p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
 <pre><code>x = 1
 y = 2
 
@@ -1795,8 +1677,6 @@ z = x + y
 
 # Imprimir
 print(x+y)</code></pre>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -1808,36 +1688,28 @@ print(x+y)</code></pre>
 <p><strong>Sintaxis</strong></p>
 <p><br>
 </p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>```python</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x = 1
+<pre><code>```python
+x = 1
 y = 2
 
 # Sumar
 z = x + y 
 
 # Imprimir
-print(x+y)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>```</code></pre>
-</div>
-</div>
+print(x+y)
+```</code></pre>
 </div><div class="column" style="width:50%;">
 <p><strong>Resultado</strong></p>
 <p><br>
 </p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb64-2"><a href="#cb64-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb64-3"><a href="#cb64-3"></a></span>
-<span id="cb64-4"><a href="#cb64-4"></a><span class="co"># Sumar</span></span>
-<span id="cb64-5"><a href="#cb64-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
-<span id="cb64-6"><a href="#cb64-6"></a></span>
-<span id="cb64-7"><a href="#cb64-7"></a><span class="co"># Imprimir</span></span>
-<span id="cb64-8"><a href="#cb64-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb58-3"><a href="#cb58-3"></a></span>
+<span id="cb58-4"><a href="#cb58-4"></a><span class="co"># Sumar</span></span>
+<span id="cb58-5"><a href="#cb58-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb58-6"><a href="#cb58-6"></a></span>
+<span id="cb58-7"><a href="#cb58-7"></a><span class="co"># Imprimir</span></span>
+<span id="cb58-8"><a href="#cb58-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1850,37 +1722,29 @@ print(x+y)</code></pre>
 <p><strong>Sintaxis</strong></p>
 <p><br>
 </p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>```{python}</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>```</code></pre>
-</div>
-</div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sumar</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimir</span></span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Resultado</strong></p>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/code/verbatim.md">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb68-2"><a href="#cb68-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb68-3"><a href="#cb68-3"></a></span>
-<span id="cb68-4"><a href="#cb68-4"></a><span class="co"># Sumar</span></span>
-<span id="cb68-5"><a href="#cb68-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
-<span id="cb68-6"><a href="#cb68-6"></a></span>
-<span id="cb68-7"><a href="#cb68-7"></a><span class="co"># Imprimir</span></span>
-<span id="cb68-8"><a href="#cb68-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb60-2"><a href="#cb60-2"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb60-3"><a href="#cb60-3"></a></span>
+<span id="cb60-4"><a href="#cb60-4"></a><span class="co"># Sumar</span></span>
+<span id="cb60-5"><a href="#cb60-5"></a>z <span class="op">=</span> x <span class="op">+</span> y </span>
+<span id="cb60-6"><a href="#cb60-6"></a></span>
+<span id="cb60-7"><a href="#cb60-7"></a><span class="co"># Imprimir</span></span>
+<span id="cb60-8"><a href="#cb60-8"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
@@ -1904,18 +1768,8 @@ print(x+y)</code></pre>
 </div>
 <p><br>
 </p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 2.0%;justify-content: center;">
+<div style="text-align:center">
 <p>…</p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
 </div>
 <p><br>
 </p>
@@ -1926,12 +1780,12 @@ print(x+y)</code></pre>
 <p><br>
 </p>
 <p><strong>Crear</strong></p>
-<p><code>#&lt;tipo&gt;-&lt;identificador&gt;</code></p>
+<p><code class="sourceCode markdown">#<span class="kw">&lt;tipo&gt;</span>-<span class="kw">&lt;identificador&gt;</span></code></p>
 <p><br>
 </p>
 <div class="fragment">
 <p><strong>Citar</strong></p>
-<p><code>@&lt;tipo&gt;-&lt;identificador&gt;</code></p>
+<p><code class="sourceCode markdown">@<span class="kw">&lt;tipo&gt;</span>-<span class="kw">&lt;identificador&gt;</span></code></p>
 </div>
 </section>
 <section id="referencias-cruzadas-algunos-tipos" class="slide level2">
@@ -1985,17 +1839,15 @@ h^2 = c_1^2 + c_2^2
 <h2>Teoremas: Ejemplo</h2>
 <p><br>
 </p>
-<div class="cell" data-file="DRY/teoremas/pitagoras.md">
-<div class="sourceCode cell-code" id="cb70" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>::: {#thm-ptg}</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teorema de Pitágoras</span></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que</span>
-<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>h^2 = c_1^2 + c_2^2</span>
-<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb62" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>::: {#thm-ptg}</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teorema de Pitágoras</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>En un triángulo rectángulo con hipotenusa de longitud $h$ y catetos de longitudes $c_1$ y $c_2$ se cumple que</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>h^2 = c_1^2 + c_2^2</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>El @thm-ptg, conocido como Teorema de Pitágoras, es probablemente uno de los más famosos de la historia de las matemáticas.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="teoremas-algunos-tipos" class="slide level2">
 <h2>Teoremas: Algunos tipos</h2>
@@ -2034,15 +1886,15 @@ h^2 = c_1^2 + c_2^2
 </p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="sourceCode cell-code" id="cb71" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode" id="cb63" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="sourceCode cell-code" id="cb72" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>::: {.proof}</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode" id="cb64" data-code-line-numbers="false"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>::: {.proof}</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>Bla, bla, bla.</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2357,44 +2209,6 @@ h^2 = c_1^2 + c_2^2
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
