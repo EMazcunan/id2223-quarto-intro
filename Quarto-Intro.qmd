@@ -1091,7 +1091,6 @@ Esto es importante.
 
 
 
-
 ## Código (`verbatim`)
 
 \
@@ -1104,18 +1103,17 @@ Esto es importante.
 
 \
 
-````
+```{python}
+#| echo: false
+#| eval: true
+#| output: asis
+print("````{.md code-line-numbers=false}")
+print("```")
+with open('DRY/code/pycode.py') as f:
+    print(f.read())
+print("```")
+print("````")
 ```
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
-```
-````
 
 
 :::
@@ -1125,15 +1123,14 @@ print(x+y)
 
 \
 
-```
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+#| output: asis
+print("```")
+with open('DRY/code/pycode.py') as f:
+    print(f.read())
+print("```")
 ```
 
 :::
@@ -1152,18 +1149,17 @@ print(x+y)
 
 \
 
-````
-```python
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+#| output: asis
+print("````{.md code-line-numbers=false}")
+print("```python")
+with open('DRY/code/pycode.py') as f:
+    print(f.read())
+print("```")
+print("````")
 ```
-````
 
 
 :::
@@ -1178,9 +1174,8 @@ print(x+y)
 #| eval: true
 #| output: asis
 print("```python")
-with open('DRY/code/verbatim.qmd') as f:
-    for line in f:
-        print(line.rstrip("\n"))
+with open('DRY/code/pycode.py') as f:
+    print(f.read())
 print("```")
 ```
 
@@ -1200,18 +1195,17 @@ print("```")
 
 \
 
-````
-```{{python}}
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+```{python}
+#| echo: false
+#| eval: true
+#| output: asis
+print("````{.md code-line-numbers=false}")
+print("```{{python}}")
+with open('DRY/code/pycode.py') as f:
+        print(f.read())
+print("```")
+print("````")
 ```
-````
 
 
 
@@ -1223,17 +1217,17 @@ print(x+y)
 \
 
 ```{python}
+#| echo: false
 #| eval: true
-x = 1
-y = 2
-
-# Sumar
-z = x + y 
-
-# Imprimir
-print(x+y)
+with open('DRY/code/pycode.py') as f:
+    code = f.read()    
+with open('DRY/code/pycodeblock.qmd', 'w') as f2:
+    f2.write('```{python}\n#| eval: true\n#| echo: true\n')
+    f2.write(code)
+    f2.write('\n```')
 ```
 
+{{< include DRY/code/pycodeblock.qmd >}}
 ::::
 
 :::::

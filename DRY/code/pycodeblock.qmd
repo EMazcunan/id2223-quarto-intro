@@ -1,3 +1,6 @@
+```{python}
+#| eval: true
+#| echo: true
 x = 1
 y = 2
 
@@ -6,3 +9,4 @@ z = x + y
 
 # Imprimir
 print(x+y)
+```

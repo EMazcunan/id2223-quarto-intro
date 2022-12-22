@@ -1,0 +1,8 @@
+x = 1
+y = 2
+
+# Sumar
+z = x + y 
+
+# Imprimir
+print(x+y)
